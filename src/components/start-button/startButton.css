@@ -27,7 +27,7 @@
   content: '\00bb';
   position: absolute;
   opacity: 0;
-  bottom: 1;
+  top: 1;
   right: -20px;
   transition: 0.5s;
 }
