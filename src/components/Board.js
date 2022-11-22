@@ -6,6 +6,7 @@ import Square from "./Square";
 function Board() {
   return (
     <>
+    <div id ="board-container">
       <div id="board">
         <Square number="100" />
         <Square number="99" />
@@ -112,12 +113,13 @@ function Board() {
         <Square number="13" /> {" "}
         <Square number="12" />
         <Square number="11" />
-        
-         
+
+
         <Square number="1" /> <Square number="2" /> <Square number="3" />{" "}
         <Square number="4" /> <Square number="5" />
         <Square number="6" /> <Square number="7" /> <Square number="8" />{" "}
         <Square number="9" /> <Square number="10" />
+      </div>
       </div>
       </>
      
