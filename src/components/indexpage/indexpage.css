@@ -1,0 +1,33 @@
+.instructions {
+  font-family: '8-bit-pusab';
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+}
+
+.instructions ul li {
+  list-style-type: none;
+  text-align: center;
+}
+
+.title-container {
+  font-family: '8-bit-pusab';
+  width: 100%;
+  border: 1px;
+  border-radius: 10px;
+  padding: 20px;
+  position: fixed;
+}
+
+.title-container h1{
+  text-align: center;
+}
+
+.button-container {
+  position: fixed;
+  bottom: 80px;
+  left: 625px;
+  font-family: '8-bit-pusab';
+}
