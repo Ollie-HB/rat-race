@@ -1,8 +1,17 @@
-#board-container {
+
+.container {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
   background-color: blue;
+}
+
+.active-player {
+  height: 85vh;
+  margin-right: 100px;
+  font-size: xx-large;
+
 }
 
 #board {
