@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './Dice.css'
+
 
 import Dice1 from './images/Dice1.png'
 import Dice2 from './images/Dice2.png'
@@ -29,7 +29,7 @@ const randomNum = Math.floor(Math.random() * 6);
   return (
    <div className='diceContainer'>
    <center>
-   <img className='square' src={diceImage}></img>
+   <img className='dice-square' src={diceImage}></img>
    <button type="button" className='diceButton' onClick={rollDice}>Roll Dice</button>
    </center>
    </div>
