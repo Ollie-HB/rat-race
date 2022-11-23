@@ -7,12 +7,13 @@ function Square(props){
     // if (props.number = 1) {
         
     // }
-    
+
     return (
         <Fragment>
             <div className="square">
                 {props.number}
-                <div id="current-player"></div>
+                {/* Conditional rendering */}
+                {props.player === 'player1' && <div>Player1</div>}
             </div>
         </Fragment>
     )
