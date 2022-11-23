@@ -22,15 +22,15 @@ const Dice = () => {
 const [diceImage, setDiceImage] = useState(diceImages[5])
   
 const rollDice = () => {
-var randomNum = Math.floor(Math.random() * 6);
+const randomNum = Math.floor(Math.random() * 6);
   setDiceImage(diceImages[randomNum]);
   }
   
   return (
-   <div className = 'diceContainer'>
+   <div className='diceContainer'>
    <center>
-   <img className= 'square' src={diceImage}></img>
-   <button type="button" class="btn btn-outline-primary" onClick={rollDice}>Roll Dice</button>
+   <img className='square' src={diceImage}></img>
+   <button type="button" className='diceButton' onClick={rollDice}>Roll Dice</button>
    </center>
    </div>
   
