@@ -5,7 +5,7 @@ function ActivePlayer(props){
     return(
         <div>
             <div className="active-player">
-                <h3>Players</h3>
+                <h2>Players</h2>
                 <div className="player player-1"></div>
                 <div className="player player-2"></div>
             </div>
