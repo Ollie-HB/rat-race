@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './startButton.css'
 
-export const StartButton = () => {
-
+export const StartButton = ({ startGame }) => {
+ 
+  
   return (
     <div>
-      <button className='button'><span>Play</span></button>
+      <button className='button' onClick={ startGame }><span>Play</span></button>
     </div>
   );
 };

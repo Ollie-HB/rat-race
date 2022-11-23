@@ -12,7 +12,7 @@ export default function Board () {
     for (let i = 0; i < verticalAxis.length; i++) { //logic for one loop 
       for (let j = 0; j < horizontalAxis.length; j++) { //logic for the other loop 
         board.push
-        (<div class = "tile">[{horizontalAxis[i]}{verticalAxis[j]}]
+        (<div className= "tile">[{horizontalAxis[i]}{verticalAxis[j]}]
         </div>)
       }
     }

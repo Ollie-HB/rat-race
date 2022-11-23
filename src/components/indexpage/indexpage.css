@@ -1,20 +1,88 @@
+body {
+	background-image: url('/public/zohaib-ismail-3.jpeg');
+	background-position: 0px 0px;
+  background-repeat: repeat-x;
+  animation: animatedBackground 15s linear infinite alternate;
+}
+
+*, :before, :after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
 .instructions {
   font-family: '8-bit-pusab';
-  text-align: center;
+	color: #000000;
   position: fixed;
   top: 50%;
   left: 50%;
+	margin-top: 60px;
   transform: translate(-50%, -55%);
+	padding: 15px;
+	overflow: hidden;
 }
 
 .instructions ul li {
   list-style-type: none;
-  text-align: center;
+}
+
+/* border  */
+
+.instructions::before {
+	content: '';
+	position: fixed;
+	width: 500%;
+	height: 1000%;
+	background: repeating-linear-gradient(
+		#fa7b00 0%,
+		#fa7b00 7.5px,
+			#fa7b00 7.5px,
+			#fa7b00 15px,
+			#fa7b00 15px,
+			#fa7b00 22.5px,
+			#fa7b00 22.5px,
+			#fa7b00 30px);
+	transform: translateX(-20%) translateY(-20%) rotate(-45deg);
+	animation: animate 20s linear infinite;
+}
+
+.instructions .content {
+	position: relative;
+	background: repeating-linear-gradient(
+		45deg,
+		#77cef9,
+		#77cef9 2px,
+		#e1dddd 5px,
+		#e1dddd 4px);
+	background-color: #77cef9;
+	padding: 30px;
+	text-align: center;
+	z-index: 2;
+}
+
+.instructions,
+.instructions .content {
+	box-shadow: 0 0 7px rgb(0, 0, 0),
+				0 0 5px rgba(0, 0, 0, 1),
+				inset 0 0 5px rgba(0, 0, 0, 1);
+	border-radius: 50px;
+}
+
+@keyframes animate {
+	from {
+		background-position: 0;
+	}
+
+	to {
+		background-position: 0 450px;
+	}
 }
 
 .title-container {
   font-family: '8-bit-pusab';
-  width: 100%;
+	font-size: larger;
+	left:28%;
   border: 1px;
   border-radius: 10px;
   padding: 20px;
@@ -23,11 +91,38 @@
 
 .title-container h1{
   text-align: center;
+	text-transform: uppercase;
+	font-size: 70px;
+	font-weight: 700;
+	color: #ffffff;
+	text-shadow: 1px 1px 1px #919191,
+        1px 2px 1px #919191,
+        1px 3px 1px #919191,
+        1px 4px 1px #919191,
+        1px 5px 1px #919191,
+        1px 6px 1px #919191,
+        1px 7px 1px #919191,
+        1px 8px 1px #919191,
+        1px 9px 1px #919191,
+        1px 10px 1px #919191,
+    1px 18px 6px rgba(16,16,16,0.4),
+    1px 22px 10px rgba(16,16,16,0.2),
+    1px 25px 35px rgba(16,16,16,0.2),
+    1px 30px 60px rgba(16,16,16,0.4);
 }
 
 .button-container {
   position: fixed;
-  bottom: 80px;
-  left: 625px;
+  bottom: 40px;
+  left: 620px;
   font-family: '8-bit-pusab';
+}
+
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
 }

@@ -7,6 +7,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<IndexPage navigate={useNavigate()} />} />
+      <Route path="/game" element={<Board navigate={useNavigate()} />} />
     </Routes>
   );
 };
