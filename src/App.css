@@ -1,6 +1,33 @@
-#app {
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  background-color: blue;
+}
+
+.active-player {
+  height: 85vh;
+  margin-right: 100px;
+  font-size: xx-large;
+
+}
+
+#board {
   display: grid;
-  place-content: center;
-  height: 100vh;
-  background-color: rgb(14, 1, 1);
+  grid-gap: 0.1rem;
+  grid-template-columns: repeat(10, 1fr);
+  padding: 0.2rem;
+  width: 65rem;
+}
+
+.square {
+  background-color: #e09850;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100px;
+  width: 100px;
 }

@@ -1,13 +1,12 @@
+import React, { Fragment } from 'react';
 import './App.css';
-import Board from './components//board/Board'
-import Dice from './components/dice/Dice'
+import Container from './components/Container/Container'
 
 function App() {
   return (
-    <div id = "app">
-      <Board />
-      <Dice />
-    </div>
+    <Fragment>
+      <Container />
+    </Fragment>
   );
 }
 
