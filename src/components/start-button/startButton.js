@@ -1,12 +1,12 @@
-import React, { useState } from 'react'
-import './startButton.css'
+import React, { useState } from "react";
+import "./startButton.css";
 
 export const StartButton = ({ startGame }) => {
- 
-  
   return (
     <div>
-      <button className='button' onClick={ startGame }><span>Play</span></button>
+      <button className="button" onClick={startGame}>
+        <span>Play</span>
+      </button>
     </div>
   );
 };

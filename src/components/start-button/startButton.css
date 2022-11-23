@@ -11,10 +11,9 @@
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
-  font-family: '8-bit-pusab';
-  box-shadow: 0 0 5px rgb(0, 0, 0),
-				0 0 3px rgba(0, 0, 0, 1),
-				inset 0 0 3px rgba(0, 0, 0, 1);
+  font-family: "8-bit-pusab";
+  box-shadow: 0 0 5px rgb(0, 0, 0), 0 0 3px rgba(0, 0, 0, 1),
+    inset 0 0 3px rgba(0, 0, 0, 1);
 }
 
 .button span {
@@ -26,7 +25,7 @@
 }
 
 .button span:after {
-  content: '\00bb';
+  content: "\00bb";
   position: absolute;
   opacity: 0;
   bottom: 7px;
