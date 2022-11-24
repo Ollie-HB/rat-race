@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import "./indexpage.css";
-import { Instructions } from "../instructions/Instructions.js";
-import { StartButton } from "../start-button/startButton";
+import { Instructions } from "../Instructions/Instructions.js";
+import { StartButton } from "../StartButton/startButton";
 
 // const props = {navigate: 'someValue'}
 // Destructuring

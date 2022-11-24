@@ -29,7 +29,7 @@ const randomNum = Math.floor(Math.random() * 6);
   return (
    <div className='diceContainer'>
    <center>
-   <img className='dice-square' src={diceImage}></img>
+   <img className='dice-square' alt="" src={diceImage}></img>
    <button type="button" className='diceButton' onClick={rollDice}>Roll Dice</button>
    </center>
    </div>
