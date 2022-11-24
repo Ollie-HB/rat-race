@@ -4,24 +4,21 @@
   justify-content: center;
   flex-wrap: nowrap;
   background-color: blue;
-  width: 100vw;
 }
 
-h2 {
-  height: 65vh; 
-  margin-right: 50px;
+.active-player {
+  height: 85vh;
+  margin-right: 100px;
+  font-size: xx-large;
   font-family: '8-bit-pusab';
-
 }
-
-
 
 #board {
   display: grid;
   grid-gap: 0.1rem;
   grid-template-columns: repeat(10, 1fr);
   padding: 0.2rem;
-  width: 100%
+  width: 65rem;
 }
 
 

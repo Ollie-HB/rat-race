@@ -1,12 +1,14 @@
-import React, { Fragment } from 'react';
-import './App.css';
+import "./App.css";
+import IndexPage from "./components/indexpage/indexpage.js";
+import { useNavigate, Routes, Route } from "react-router-dom";
 import Container from './components/Container/Container'
 
 function App() {
   return (
-    <Fragment>
-      <Container />
-    </Fragment>
+    <Routes>
+      <Route path="/" element={<IndexPage navigate={useNavigate()} />} />
+      <Route path="/game" element={<Container navigate={useNavigate()} />} />
+    </Routes>
   );
 }
 

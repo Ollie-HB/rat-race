@@ -1,6 +1,6 @@
 import React from "react";
 
-import Square from "../Square/Square";
+import Square from "./Square";
 
 
 function Board() {
@@ -125,4 +125,5 @@ function Board() {
      
   );
 }
+
 export default Board;
