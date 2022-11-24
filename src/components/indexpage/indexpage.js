@@ -28,7 +28,6 @@ const IndexPage = ({ navigate }) => {
           <div class="shadow"></div>
           <div class="shadow-two"></div>
         </div>
-          {/* <h1>Rat Race</h1> */}
           <img src="_com.apple.Pasteboard.crud9d.png" alt=""></img>
         </div>
       </div>
