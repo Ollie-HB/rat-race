@@ -4,6 +4,6 @@ import Board from './components/Board'
 
 test('displays Grid', () => {
   render(<Board />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const board = screen.getByRole('Board');
+  expect(board).toHaveAttribute('type','board');
 });
