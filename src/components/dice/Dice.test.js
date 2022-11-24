@@ -12,6 +12,14 @@ describe('Dice', () => {
   test('Dice image displayed on screen', () => {
     render(<Dice/>);
     const image = screen.getByRole('img');
-    expect(image).toHaveAttribute('src', 'Dice6.png');
+    expect(image).toHaveAttribute('src', 'wholedice.png');
+  });
+
+  test('Roll dice button works', () => {
+    render(<Dice/>);
+    const button = screen.getByRole('button');
+    const clickedButton = button.onclick
+    const image = screen.getByRole('img');
+    expect(button.onclick).toHaveAttribute('img')
   });
 });

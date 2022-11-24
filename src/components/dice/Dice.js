@@ -7,6 +7,8 @@ import Dice3 from './images/Dice3.png'
 import Dice4 from './images/Dice4.png'
 import Dice5 from './images/Dice5.png'
 import Dice6 from './images/Dice6.png'
+import WholeDice from './images/wholedice.png'
+
 
 const Dice = () => {
   
@@ -19,7 +21,7 @@ const Dice = () => {
     Dice6,
 ]
 
-const [diceImage, setDiceImage] = useState(diceImages[5])
+const [diceImage, setDiceImage] = useState(WholeDice)
   
 const rollDice = () => {
 const randomNum = Math.floor(Math.random() * 6);
