@@ -12,3 +12,5 @@ export const QuitButton = ({ quitGame }) => {
 };
 
 export default QuitButton;
+
+

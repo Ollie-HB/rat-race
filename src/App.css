@@ -1,4 +1,3 @@
-
 .container {
   display: flex;
   align-items: center;
@@ -11,7 +10,7 @@
   height: 85vh;
   margin-right: 100px;
   font-size: xx-large;
-
+  font-family: '8-bit-pusab';
 }
 
 #board {
@@ -33,3 +32,25 @@
   height: 100px;
   width: 100px;
 }
+
+.diceContainer {
+  display: flex;
+  width: 500px;
+  height: 400px;
+  background-color: transparent;
+  padding: 2rem 1rem;
+} 
+
+.dice-square {
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+ 
+}
+
+.diceButton {
+  background-color: #00bfff;
+  font-family: '8-bit-pusab';
+  font-size: 20px;
+}
+
