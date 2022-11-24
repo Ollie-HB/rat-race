@@ -56,3 +56,10 @@ h2 {
   font-family: '8-bit-pusab';
   font-size: 20px;
 }
+
+#current-player {
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  position: absolute;
+}
