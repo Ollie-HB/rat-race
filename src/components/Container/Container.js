@@ -1,8 +1,8 @@
 import React, { Fragment } from "react";
-// import Dice from '../Dice/Dice'
 import ActivePlayer from '../ActivePlayer/ActivePlayer';
 import Board from '../Board/Board';
 import DicePanel from "../Dice/dicePanel";
+
 
 function Container(){
     return (
