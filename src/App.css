@@ -11,7 +11,14 @@ h2 {
   height: 65vh; 
   margin-right: 50px;
   font-family: '8-bit-pusab';
+}
 
+body {
+  font-family: '8-bit-pusab';
+}
+
+button {
+  font-family: '8-bit-pusab';
 }
 
 #board {
@@ -20,6 +27,7 @@ h2 {
   grid-template-columns: repeat(10, 1fr);
   padding: 0.2rem;
   width: 100%;
+  font-family: '8-bit-pusab';
   height: 100%;
 }
 

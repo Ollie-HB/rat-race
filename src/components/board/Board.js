@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import Square from "../Square/Square.js";
-
+import Swal from 'sweetalert2';
 import Dice1 from '../Dice/images/Dice1.png';
 import Dice2 from '../Dice/images/Dice2.png';
 import Dice3 from '../Dice/images/Dice3.png';
@@ -20,7 +20,6 @@ function Board() {
   ]
 
   const squares = new Array(100).fill('')
-
   const [player1, setPlayer1] = useState(1)
   const [diceImage, setDiceImage] = useState(diceImages[5])
 
@@ -54,8 +53,27 @@ function Board() {
         setPlayer1(note[2][2])
       }
     };
-
   
+if (player1 >= 100) {
+  Swal.fire({
+    title: 'You won!',
+    text: 'Congratulations, You Won The Game',
+    background: '#fdfded',
+    color: '#fa7b00',
+    showDenyButton: true,
+    confirmButtonText: 'Start Again',
+    confirmButtonColor: '#ffd60a',
+    denyButtonText: 'Back',
+    denyButtonColor: '#77CEF9',
+  }).then((result) => {
+    if (result.isConfirmed) {
+    window.location.reload();
+    } else if (result.isDenied) {
+      window.location = "/"
+    }
+  });
+}
+
   return (
    <>
     <div className="title-container-board">
