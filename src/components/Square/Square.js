@@ -1,16 +1,57 @@
 import React, { Fragment } from 'react';
 // import {Player} from './Player/Player'
 function Square(props){
+
+   const pipeVisible = () => { 
+        
+            return props.notePositions.map((notePosition) => {
+                return notePosition.map((ele) => {  if(props.number === ele){
+                   
+                    return <img alt ="" src= "/musical_note.png" style = {{height:'80px', width:'40px'}} ></img>
+                     }
+
+
+                } )          
+            })
+    }
+
+    const ladderVisible = () => {
+        return props.pipePositions.map((pipePosition) => {
+            return pipePosition.map((ele) => {  if(props.number === ele){
+               
+                return <img alt ="" src= "/pipe.png" style = {{height:'80px', width:'40px'}} ></img>
+                 }
+
+
+            } ) 
+        
+        
+        })
+
+    }
+
     return (
         <Fragment>
-            <div className="square">
+            <div className="square" id={props.number}>
                 {props.number}
+                {/* {props.id} */}
                 {/* Conditional rendering */}
-                {props.player === props.number && <div> <div id="current-player"></div></div>}
+                {
+                  props.playerPosition === props.number && <div> <div id="current-player"></div></div> //returns the last expression which is html
+                }
+                {
+                  pipeVisible()
+                  
+                }
+                {
+                    ladderVisible()
+                }
             </div>
         </Fragment>
     )
 }
+
+
 export default Square;
 // first step, getting one player moving through the board
 // make special squares - choose our special numbers, eg. if land on 25, set state to 5(snake)

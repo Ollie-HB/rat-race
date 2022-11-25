@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center;
   flex-wrap: nowrap;
-  background-color: blue;
+  background-color: #e6eb57;
   width: 100vw;
 }
 
@@ -11,7 +11,6 @@ h2 {
   height: 65vh; 
   margin-right: 50px;
   font-family: '8-bit-pusab';
-
 }
 
 body {
@@ -22,7 +21,6 @@ button {
   font-family: '8-bit-pusab';
 }
 
-
 #board {
   display: grid;
   grid-gap: 0.1rem;
@@ -30,12 +28,11 @@ button {
   padding: 0.2rem;
   width: 100%;
   font-family: '8-bit-pusab';
+  height: 100%;
 }
 
-
-
 .square {
-  background-color: #e09850;
+  background-color: #e150df;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,25 +41,30 @@ button {
   width: 100px;
 }
 
-.diceContainer {
+/* .diceContainer {
   display: flex;
   width: 500px;
   height: 400px;
   background-color: transparent;
   padding: 2rem 1rem;
-} 
+}  */
 
 .dice-square {
-  width: 100px;
-  height: 100px;
-  background-color: transparent;
- 
+  width: 150px;
+  height: 150px;
+  background-color: #e6eb57;
+  position: relative;
+
 }
 
 .diceButton {
-  background-color: #00bfff;
+  background-color: #e6eb57;
   font-family: '8-bit-pusab';
   font-size: 20px;
+  border: transparent;
+  position: relative;
+  left: 70rem;
+  top: 50rem;
 }
 
 #current-player {
@@ -70,4 +72,25 @@ button {
   height: 15px;
   background-color: red;
   position: absolute;
+}
+
+.title-container-board {
+  font-family: "8-bit-pusab";
+  left: 70rem;
+  bottom: 75rem;
+  border: 1px;
+  border-radius: 10px;
+  padding: 20px;
+  position: fixed;
+}
+
+.title-container-board img {
+	position: relative;
+	padding: 20px;
+	width: 180px;
+	height: 130px;
+	left: 540px;
+	z-index: -1;
+	animation: bounce 1s ease infinite;
+  -webkit-animation: bounce 1s ease 1 .7s;
 }
