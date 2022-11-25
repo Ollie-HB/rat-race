@@ -8,7 +8,7 @@ function Board() {
   const [player1, setPlayer1] = useState(1)
 
   const pipe= [[56, 47, 38],
-                [61,72, 83],
+                [83,72, 61],
                 [90,79,68],
                ] 
 
@@ -27,11 +27,23 @@ function Board() {
 
   const rollDice = () => {
     setPlayer1(player1 + Math.floor(Math.random() * 6))
-    if (player1 === 56) {
+    if (player1 === pipe[0][0]) {
       setPlayer1(pipe[0][2])
     }
-    else{
-      return;
+      else if (player1 === pipe[1][0]) {
+      setPlayer1(pipe[1][2])
+    } 
+    else if (player1 === pipe[2][0]){
+      setPlayer1(pipe[2][2])
+    }
+    else if (player1 === note[0][0]){
+      setPlayer1(note[0][2])
+    }
+    else if (player1 === note[1][0]){
+      setPlayer1(note[1][2])
+    }
+    else if (player1 === note[2][0]){
+      setPlayer1(note[2][2])
     }
   };
 console.log(player1)
