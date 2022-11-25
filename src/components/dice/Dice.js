@@ -8,7 +8,7 @@ import Dice4 from './images/Dice4.png'
 import Dice5 from './images/Dice5.png'
 import Dice6 from './images/Dice6.png'
 
-const Dice = () => {
+export const Dice = () => {
   
   var diceImages = [
     Dice1, 
@@ -17,14 +17,16 @@ const Dice = () => {
     Dice4,
     Dice5,
     Dice6,
-]
+  ]
 
-const [diceImage, setDiceImage] = useState(diceImages[5])
+  const [diceImage, setDiceImage] = useState(diceImages[5])
   
-const rollDice = () => {
-const randomNum = Math.floor(Math.random() * 6);
-  setDiceImage(diceImages[randomNum]);
-  }
+  
+  
+  const rollDice = () => {
+    const randomNum = Math.floor(Math.random() * 6);
+    setDiceImage(diceImages[randomNum]);
+  };
   
   return (
    <div className='diceContainer'>

@@ -63,3 +63,14 @@ h2 {
   background-color: red;
   position: absolute;
 }
+
+.notes {
+  width: 15px;
+  height: 15px;
+  background-color: #00ff15;
+  position: absolute;
+}
+
+.snake {
+  background-color:azure;
+}
