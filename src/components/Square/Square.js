@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 // import {Player} from './Player/Player'
 function Square(props){
-   const snakeVisible = () => { 
+   const pipeVisible = () => { 
         
     //    return props.snakePositions.map((element) => {
     //          if(props.number === element){
@@ -9,10 +9,10 @@ function Square(props){
     //      }
     //     });
 
-            return props.snakePositions.map((snakePosition) => {
-                return snakePosition.map((ele) => {  if(props.number === ele){
+            return props.notePositions.map((notePosition) => {
+                return notePosition.map((ele) => {  if(props.number === ele){
                    
-                    return <img alt ="" src= "/pipe.png" style = {{height:'80px', width:'40px'}} ></img>
+                    return <img alt ="" src= "/musical_note.png" style = {{height:'80px', width:'40px'}} ></img>
                      }
 
 
@@ -20,12 +20,24 @@ function Square(props){
             
             
             })
-       
-        // if(props.snakePositions === props.number){
-            
-        //     return <div>snake</div>
-        // }
     }
+
+    const ladderVisible = () => {
+        return props.pipePositions.map((pipePosition) => {
+            return pipePosition.map((ele) => {  if(props.number === ele){
+               
+                return <img alt ="" src= "/pipe.png" style = {{height:'80px', width:'40px'}} ></img>
+                 }
+
+
+            } ) 
+        
+        
+        })
+
+    }
+
+
 
     // //props.snakePositions.map(position=> position.map((ele) => if(props.number === element){
     //         return <img alt ="" src= "/pipe.png" style = {{height:'80px', width:'0px'}} ></img>
@@ -40,7 +52,11 @@ function Square(props){
                   props.playerPosition === props.number && <div> <div id="current-player"></div></div> //returns the last expression which is html
                 }
                 {
-                  snakeVisible()
+                  pipeVisible()
+                  
+                }
+                {
+                    ladderVisible()
                 }
             </div>
         </Fragment>

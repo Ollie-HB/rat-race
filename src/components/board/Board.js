@@ -7,12 +7,15 @@ function Board() {
   // const [playerOne, setPlayerOne] = useState(1)
   const [player1, setPlayer1] = useState(1)
 
-  const snake= [[38, 47, 56],
-                [83,72, 71],
+  const pipe= [[38, 47, 56],
+                [83,72, 61],
                 [90,79,68],
                ] 
-             
-              
+
+  const note = [[34, 23, 12],
+                 [97,86, 75],
+                 [30,19,8],
+                 ] 
               
 
                 
@@ -31,7 +34,7 @@ console.log(player1)
       <div id="board">
         {squares.map((_, i) => {
           // You can pass as many props as you like to components!  //if player position === snake square change position to first value of snake (setPlayer position to lowest)
-          return <Square number={100 - i} playerPosition={player1} snakePositions={snake}  />
+          return <Square number={100 - i} playerPosition={player1} pipePositions={pipe} notePositions={note}  />
         })}
       </div>
     </div>
