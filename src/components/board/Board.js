@@ -1,5 +1,10 @@
 import React, {useState} from "react";
 import Square from "../Square/Square.js";
+import gameOver from "../GameOver/gameOver.js"
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
+import Swal from 'sweetalert2'
+
 function Board() {
   const squares = new Array(100).fill('')
   // const [playerOne, setPlayerOne] = useState(1)
@@ -9,6 +14,12 @@ function Board() {
 const rollDice = () => {
   setPlayer1(player1 + Math.floor(Math.random() * 6))
   // setPlayer2(player2 + Math.floor(Math.random() * 6))
+}
+
+if (player1 >= 100) {
+  Swal.fire(
+    'You Won!',
+  )
 }
   return (
     <div id ="board-container">
