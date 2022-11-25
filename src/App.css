@@ -14,8 +14,6 @@ h2 {
 
 }
 
-
-
 #board {
   display: grid;
   grid-gap: 0.1rem;
@@ -23,8 +21,6 @@ h2 {
   padding: 0.2rem;
   width: 100%
 }
-
-
 
 .square {
   background-color: #e09850;
