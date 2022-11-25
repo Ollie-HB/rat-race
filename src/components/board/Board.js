@@ -27,7 +27,7 @@ function Board() {
   const rollDice = () => {
     const randomNum = Math.floor(Math.random() * 6);
       setDiceImage(diceImages[randomNum]);
-      setPlayer1(player1 + randomNum);
+      setPlayer1(player1 + randomNum + 1);
   };
 
 if (player1 >= 100) {
