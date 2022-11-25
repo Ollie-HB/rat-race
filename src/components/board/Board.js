@@ -38,9 +38,26 @@ if (player1 >= 100) {
 }
 
   return (
+    <>
+      <div className="title-container-board">
+          <div className="title-content-board">
+            <div class="bouncing-text">
+              <div class="r">R</div>
+              <div class="a">A</div>
+              <div class="t">T</div>
+              <div class="r2">R</div>
+              <div class="a2">A</div>
+              <div class="c">C</div>
+              <div class="e">E</div>
+              <div class="shadow"></div>
+              <div class="shadow-two"></div>
+            </div>
+            <img src="_com.apple.Pasteboard.crud9d.png" alt=""></img>
+          </div>
+      </div>
     <div id ="board-container">
-     <button type="button" className='diceButton' onClick={rollDice}>Roll Dice</button>
-     <img className='dice-square' alt="" src={diceImage}></img>
+     <button type="button" className='diceButton' onClick={rollDice}><img className='dice-square' alt="" src={diceImage}></img></button>
+     
       <div id="board">
         {squares.map((_, i) => {
           // You can pass as many props as you like to components!
@@ -48,6 +65,7 @@ if (player1 >= 100) {
         })}
           </div>
           </div>
+      </>
       );
     }
     export default Board;
