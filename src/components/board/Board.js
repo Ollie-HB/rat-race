@@ -1,9 +1,7 @@
 import React, {useState} from "react";
 import Square from "../Square/Square.js";
-import gameOver from "../GameOver/gameOver.js"
-import Popup from 'reactjs-popup';
-import 'reactjs-popup/dist/index.css';
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
+import QuitButton from "../QuitButton/quitButton.js";
 
 function Board() {
   const squares = new Array(100).fill('')
@@ -17,10 +15,25 @@ const rollDice = () => {
 }
 
 if (player1 >= 100) {
-  Swal.fire(
-    'You Won!',
-  )
+  Swal.fire({
+    title: 'You won!',
+    text: 'Congratulations, You Won The Game',
+    background: '#fdfded',
+    color: '#fa7b00',
+    showDenyButton: true,
+    confirmButtonText: 'Start Again',
+    confirmButtonColor: '#ffd60a',
+    denyButtonText: 'Back',
+    denyButtonColor: '#77CEF9',
+  }).then((result) => {
+    if (result.isConfirmed) {
+    window.location.reload();
+    } else if (result.isDenied) {
+      window.location = "/"
+    }
+  });
 }
+
   return (
     <div id ="board-container">
       <button type="button" className='diceButton' onClick={rollDice}>Roll Dice</button>
