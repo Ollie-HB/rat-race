@@ -1,33 +1,45 @@
 import React, {useState} from "react";
 import Square from "../Square/Square.js";
 import Dice from "../Dice/Dice.js"
-import { pipePositions, notesPositions } from "../Note/NoteAndPipe";
+
 function Board() {
   const squares = new Array(100).fill('')
   // const [playerOne, setPlayerOne] = useState(1)
   const [player1, setPlayer1] = useState(1)
 
-  const pipe= [[38, 47, 56],
-                [83,72, 61],
+  const pipe= [[56, 47, 38],
+                [61,72, 83],
                 [90,79,68],
                ] 
 
-  const note = [[34, 23, 12],
-                 [97,86, 75],
-                 [30,19,8],
+  const note = [[12, 23, 34],
+                 [75,86, 97],
+                 [8,19,30],
                  ] 
               
+// if (player1 === 56) {
+//     setPlayer1(pipe[0][2])
+//   }
+//   else{
+//     return;
+//   }
 
-                
-               
-  // const [player2, setPlayer2] = useState(1)
-  // squares[0] = 'player1'
+
   const rollDice = () => {
     setPlayer1(player1 + Math.floor(Math.random() * 6))
-    // setPlayer2(player2 + Math.floor(Math.random() * 6))
+    if (player1 === 56) {
+      setPlayer1(pipe[0][2])
+    }
+    else{
+      return;
+    }
   };
 console.log(player1)
   
+
+
+
+
   return (
     <div id ="board-container">
       <button type="button" className='diceButton' onClick={rollDice}>Roll Dice</button>

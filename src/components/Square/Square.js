@@ -1,14 +1,9 @@
 import React, { Fragment } from 'react';
 // import {Player} from './Player/Player'
 function Square(props){
+
    const pipeVisible = () => { 
         
-    //    return props.snakePositions.map((element) => {
-    //          if(props.number === element){
-    //         return <img alt ="" src= "/pipe.png" style = {{height:'80px', width:'40px'}} ></img>
-    //      }
-    //     });
-
             return props.notePositions.map((notePosition) => {
                 return notePosition.map((ele) => {  if(props.number === ele){
                    
@@ -16,9 +11,7 @@ function Square(props){
                      }
 
 
-                } ) 
-            
-            
+                } )          
             })
     }
 
@@ -37,11 +30,6 @@ function Square(props){
 
     }
 
-
-
-    // //props.snakePositions.map(position=> position.map((ele) => if(props.number === element){
-    //         return <img alt ="" src= "/pipe.png" style = {{height:'80px', width:'0px'}} ></img>
-    //     }))
     return (
         <Fragment>
             <div className="square" id={props.number}>
