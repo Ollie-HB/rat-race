@@ -3,7 +3,7 @@ import "./Instructions.css";
 
 export const Instructions = () => {
   return (
-    <div>
+    <div className="instructions-container">
       <h2> How to Play </h2>
       <ul>
         <li>Go to ‘Start Game’ to play.</li>
