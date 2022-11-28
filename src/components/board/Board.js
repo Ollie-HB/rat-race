@@ -31,48 +31,51 @@ function Board() {
   const note = [[12, 23, 34],
                  [75,86, 97],
                  [8,19,30],
-                 ] 
-                 
+                 ]       
 
   const rollDice = () => {
     const randomNum = Math.floor(Math.random() * 6);
     setDiceImage(diceImages[randomNum]);
     setPlayer1(player1 + randomNum + 1);
-    
-      if (player1 === pipe[0][0]) {
-        setPlayer1(pipe[0][2])
-      } else if (player1 === pipe[1][0]) {
-        setPlayer1(pipe[1][2])
-      } else if (player1 === pipe[2][0]) {
-        setPlayer1(pipe[2][2])
-      } else if (player1 === note[0][0]) {
-        setPlayer1(note[0][2])
-      } else if (player1 === note[1][0]) {
-        setPlayer1(note[1][2])
-      } else if (player1 === note[2][0]) {
-        setPlayer1(note[2][2])
-      }
     };
-  
-if (player1 >= 100) {
-  Swal.fire({
-    title: 'You won!',
-    text: 'Congratulations, You Won The Game',
-    background: '#fdfded',
-    color: '#fa7b00',
-    showDenyButton: true,
-    confirmButtonText: 'Start Again',
-    confirmButtonColor: '#ffd60a',
-    denyButtonText: 'Back',
-    denyButtonColor: '#77CEF9',
-  }).then((result) => {
-    if (result.isConfirmed) {
-    window.location.reload();
-    } else if (result.isDenied) {
-      window.location = "/"
+
+  const pipeNoteLogic = () => {
+    if (player1 === pipe[0][0]) {
+      setPlayer1(pipe[0][2])
+    } else if (player1 === pipe[1][0]) {
+      setPlayer1(pipe[1][2])
+    } else if (player1 === pipe[2][0]) {
+      setPlayer1(pipe[2][2])
+    } else if (player1 === note[0][0]) {
+      setPlayer1(note[0][2])
+    } else if (player1 === note[1][0]) {
+      setPlayer1(note[1][2])
+    } else if (player1 === note[2][0]) {
+      setPlayer1(note[2][2])
     }
-  });
-}
+  }
+
+  pipeNoteLogic()
+  
+  if (player1 >= 100) {
+    Swal.fire({
+      title: 'You won!',
+      text: 'Congratulations, You Won The Game',
+      background: '#fdfded',
+      color: '#fa7b00',
+      showDenyButton: true,
+      confirmButtonText: 'Start Again',
+      confirmButtonColor: '#ffd60a',
+      denyButtonText: 'Back',
+      denyButtonColor: '#77CEF9',
+    }).then((result) => {
+      if (result.isConfirmed) {
+      window.location.reload();
+      } else if (result.isDenied) {
+        window.location = "/"
+      }
+    });
+  }
 
   return (
    <>
