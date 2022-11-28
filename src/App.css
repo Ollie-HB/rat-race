@@ -67,10 +67,17 @@ button {
   top: 50rem;
 }
 
-#current-player {
+#player_1 {
   width: 15px;
   height: 15px;
   background-color: red;
+  position: right;
+}
+
+#player_2 {
+  width: 15px;
+  height: 15px;
+  background-color: blue;
   position: absolute;
 }
 

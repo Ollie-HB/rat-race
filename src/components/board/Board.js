@@ -21,7 +21,9 @@ function Board() {
 
   const squares = new Array(100).fill('')
   const [player1, setPlayer1] = useState(1)
+  const [player2, setPlayer2] = useState(1)
   const [diceImage, setDiceImage] = useState(diceImages[5])
+  const [player1Turn, setPlayer1Turn] = useState(true)
 
   const pipe= [[56, 47, 38],
                 [83,72, 61],
@@ -37,8 +39,9 @@ function Board() {
   const rollDice = () => {
     const randomNum = Math.floor(Math.random() * 6);
     setDiceImage(diceImages[randomNum]);
-    setPlayer1(player1 + randomNum + 1);
     
+    if (player1Turn === true) {
+      setPlayer1(player1 + randomNum + 1);
       if (player1 === pipe[0][0]) {
         setPlayer1(pipe[0][2])
       } else if (player1 === pipe[1][0]) {
@@ -52,6 +55,25 @@ function Board() {
       } else if (player1 === note[2][0]) {
         setPlayer1(note[2][2])
       }
+      setPlayer1Turn(false)
+    }
+    else if (player1Turn === false) {
+      setPlayer2(player2 + randomNum + 1);
+      if (player2 === pipe[0][0]) {
+        setPlayer2(pipe[0][2])
+      } else if (player2 === pipe[1][0]) {
+        setPlayer2(pipe[1][2])
+      } else if (player2 === pipe[2][0]) {
+        setPlayer2(pipe[2][2])
+      } else if (player2 === note[0][0]) {
+        setPlayer2(note[0][2])
+      } else if (player2 === note[1][0]) {
+        setPlayer2(note[1][2])
+      } else if (player2 === note[2][0]) {
+        setPlayer2(note[2][2])
+      }
+      setPlayer1Turn(true)
+    }
     };
   
 if (player1 >= 100) {
@@ -96,7 +118,7 @@ if (player1 >= 100) {
       <button type="button" className='diceButton' onClick={rollDice}><img className='dice-square' alt="" src={diceImage}></img></button>
       <div id="board">
         {squares.map((_, i) => {
-          return <Square number={100 - i} playerPosition={player1} pipePositions={pipe} notePositions={note}  />
+          return <Square number={100 - i} playerPosition={player1} playerPosition2={player2} pipePositions={pipe} notePositions={note}  />
         })}
       </div>
     </div>

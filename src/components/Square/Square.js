@@ -37,7 +37,10 @@ function Square(props){
                 {/* {props.id} */}
                 {/* Conditional rendering */}
                 {
-                  props.playerPosition === props.number && <div> <div id="current-player"></div></div> //returns the last expression which is html
+                  props.playerPosition === props.number && <div> <div id="player_1"></div></div> //returns the last expression which is html
+                }
+                {
+                  props.playerPosition2 === props.number && <div> <div id="player_2"></div></div> //returns the last expression which is html
                 }
                 {
                   pipeVisible()
