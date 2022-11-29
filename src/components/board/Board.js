@@ -100,23 +100,23 @@ if (player1 >= 100) {
    <>
     <div className="title-container-board">
         <div className="title-content-board">
-          <div class="bouncing-text">
-            <div class="r">R</div>
-            <div class="a">A</div>
-            <div class="t">T</div>
-            <div class="r2">R</div>
-            <div class="a2">A</div>
-            <div class="c">C</div>
-            <div class="e">E</div>
-            <div class="shadow"></div>
-            <div class="shadow-two"></div>
+          <div className="bouncing-text">
+            <div className="r">R</div>
+            <div className="a">A</div>
+            <div className="t">T</div>
+            <div className="r2">R</div>
+            <div className="a2">A</div>
+            <div className="c">C</div>
+            <div className="e">E</div>
+            <div className="shadow"></div>
+            <div className="shadow-two"></div>
           </div>
             <img src="_com.apple.Pasteboard.crud9d.png" alt=""></img>
           </div>
         </div>
     <div id ="board-container">
       <button type="button" className='diceButton' onClick={rollDice}><img className='dice-square' alt="" src={diceImage}></img></button>
-      <div id="board">
+      <div id="board-content">
         {squares.map((_, i) => {
           return <Square number={100 - i} playerPosition={player1} playerPosition2={player2} pipePositions={pipe} notePositions={note}  />
         })}

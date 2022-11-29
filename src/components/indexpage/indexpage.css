@@ -116,8 +116,7 @@
   font-family: "8-bit-pusab";
   display: flex;
   justify-content: center;
-  margin-top: 26rem;
-  
+  margin-top: 20rem;
 }
 
 @keyframes animatedBackground {
