@@ -47,7 +47,6 @@ function Board() {
     setDiceImage(diceImages[randomNum]);
     return randomNum;
   }
-
   const handleRoll = () => {
     const roll = rollDice();
     movePlayer(roll);
@@ -56,31 +55,49 @@ function Board() {
   const movePlayer = (roll) => {
     if (player1Turn === true) {
       setPlayer1(player1 + roll + 1);
-      getNewSquare(player1, setPlayer1);
+      // getNewSquare(player1, setPlayer1);
       setPlayer1Turn(false);
+      console.log("Player 1's turn - it has moved with the dice roll", player1)
     } else {
       setPlayer2(player2 + roll + 1);
-      getNewSquare(player2, setPlayer2);
+      // getNewSquare(player2, setPlayer2);
       setPlayer1Turn(true);
+      console.log("Player 2's turn - it has moved with the dice roll", player2)
     }
   }
 
-  const getNewSquare = (player, setPlayer) => {
-    if (player === pipe[0][0]) {
-      setPlayer(pipe[0][2])
-    } else if (player === pipe[1][0]) {
-      setPlayer(pipe[1][2])
-    } else if (player === pipe[2][0]) {
-      setPlayer(pipe[2][2])
-    } else if (player === note[0][0]) {
-      setPlayer(note[0][2])
-    } else if (player === note[1][0]) {
-      setPlayer(note[1][2])
-    } else if (player === note[2][0]) {
-      setPlayer(note[2][2])
+  const getNewSquareP1 = () => {
+    if (player1 === pipe[0][0]) {
+      setPlayer1(pipe[0][2])
+    } else if (player1 === pipe[1][0]) {
+      setPlayer1(pipe[1][2])
+    } else if (player1 === pipe[2][0]) {
+      setPlayer1(pipe[2][2])
+    } else if (player1 === note[0][0]) {
+      setPlayer1(note[0][2])
+    } else if (player1 === note[1][0]) {
+      setPlayer1(note[1][2])
+    } else if (player1 === note[2][0]) {
+      setPlayer1(note[2][2])
     }
   }
-    
+
+  const getNewSquareP2 = () => {
+    if (player2 === pipe[0][0]) {
+      setPlayer2(pipe[0][2])
+    } else if (player2 === pipe[1][0]) {
+      setPlayer2(pipe[1][2])
+    } else if (player2 === pipe[2][0]) {
+      setPlayer2(pipe[2][2])
+    } else if (player2 === note[0][0]) {
+      setPlayer2(note[0][2])
+    } else if (player2 === note[1][0]) {
+      setPlayer2(note[1][2])
+    } else if (player2 === note[2][0]) {
+      setPlayer2(note[2][2])
+    }
+  }
+ 
     // if (player1Turn === true) {
     //   setPlayer1(player1 + randomNum + 1);
     //   if (player1 === pipe[0][0]) {
@@ -117,8 +134,9 @@ function Board() {
     // }
     // };
 
-    // getNewSquare();
-    movePlayer();
+    // getNewSquareP1()
+    // getNewSquareP2()
+
   
 if (player1 >= 100) {
   Swal.fire({
