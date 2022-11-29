@@ -34,7 +34,11 @@ button {
 #board img {
   position: absolute;
   z-index: 1;
-  width: 1015px;
+  width: 63.438rem;
+}
+
+#musical_note {
+  z-index: 3;
   
 }
 
