@@ -1,5 +1,6 @@
 import React, {useState} from "react";
-import Square from "../Square/Square.js";
+//  import Square from "../Square/Square.js";
+import Row from "../Row/Row.js";
 import Swal from 'sweetalert2';
 import Dice1 from '../Dice/images/Dice1.png';
 import Dice2 from '../Dice/images/Dice2.png';
@@ -19,7 +20,9 @@ function Board() {
     Dice6,
   ]
 
-  const squares = new Array(100).fill('')
+  const rows = new Array(10).fill('')
+
+  // const squares = new Array(100).fill('')
   const [player1, setPlayer1] = useState(1)
   const [player2, setPlayer2] = useState(1)
   const [diceImage, setDiceImage] = useState(diceImages[5])
@@ -34,7 +37,10 @@ function Board() {
                  [75,86, 97],
                  [8,19,30],
                  ] 
-                 
+
+  const isReversed = (index) => {
+    return index % 2 === 0;
+  }                 
 
   const rollDice = () => {
     const randomNum = Math.floor(Math.random() * 6);
@@ -117,9 +123,12 @@ if (player1 >= 100) {
     <div id ="board-container">
       <button type="button" className='diceButton' onClick={rollDice}><img className='dice-square' alt="" src={diceImage}></img></button>
       <div id="board">
-        {squares.map((_, i) => {
-          return <Square number={100 - i} playerPosition={player1} playerPosition2={player2} pipePositions={pipe} notePositions={note}  />
+        {rows.map((_, i) => {
+          return <Row number={i} playerPosition={player1} playerPosition2={player2} pipePositions={pipe} notePositions={note} isReversed={isReversed(i)} />
         })}
+        {/* {squares.map((_, i) => {
+          return <Square number={100 - i} playerPosition={player1} playerPosition2={player2} pipePositions={pipe} notePositions={note}  /> */}
+        {/* })} */}
       </div>
     </div>
       </>
