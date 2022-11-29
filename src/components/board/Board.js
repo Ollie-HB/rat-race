@@ -134,8 +134,8 @@ function Board() {
     // }
     // };
 
-    // getNewSquareP1()
-    // getNewSquareP2()
+    getNewSquareP1()
+    getNewSquareP2()
 
   
 if (player1 >= 100) {
