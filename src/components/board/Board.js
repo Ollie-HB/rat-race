@@ -120,6 +120,7 @@ if (player1 >= 100) {
         {squares.map((_, i) => {
           return <Square number={100 - i} playerPosition={player1} playerPosition2={player2} pipePositions={pipe} notePositions={note}  />
         })}
+        <img src="Board.png" alt=""></img>
       </div>
     </div>
       </>

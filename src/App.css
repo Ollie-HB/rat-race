@@ -5,6 +5,7 @@
   flex-wrap: nowrap;
   background-color: transparent;
   width: 100vw;
+  height: 100vh;
 }
 
 /* h2 {
@@ -28,17 +29,24 @@ button {
   padding: 0.2rem;
   width: 100%;
   font-family: '8-bit-pusab';
-  height: 100%;
+}
+
+#board img {
+  position: absolute;
+  z-index: 1;
+  width: 1015px;
+  
 }
 
 .square {
-  background-color: #e150df;
+  background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 100px;
-  width: 100px;
+  height: 6.25rem;
+  width: 6.25rem;
+  position: relative;
 }
 
 /* .diceContainer {
@@ -70,14 +78,16 @@ button {
   width: 15px;
   height: 15px;
   background-color: red;
-  position: right;
+  position: relative;
+  z-index: 3;
 }
 
 #player_2 {
   width: 15px;
   height: 15px;
   background-color: blue;
-  position: absolute;
+  position: relative;
+  z-index: 3;
 }
 
 .title-container-board {
