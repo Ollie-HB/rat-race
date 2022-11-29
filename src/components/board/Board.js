@@ -79,7 +79,25 @@ function Board() {
 if (player1 >= 100) {
   Swal.fire({
     title: 'You won!',
-    text: 'Congratulations, You Won The Game',
+    text: 'Congratulations Player 1, You Won The Game',
+    background: '#fdfded',
+    color: '#fa7b00',
+    showDenyButton: true,
+    confirmButtonText: 'Start Again',
+    confirmButtonColor: '#ffd60a',
+    denyButtonText: 'Back',
+    denyButtonColor: '#77CEF9',
+  }).then((result) => {
+    if (result.isConfirmed) {
+    window.location.reload();
+    } else if (result.isDenied) {
+      window.location = "/"
+    }
+  });
+} else if(player2 >=100) {
+  Swal.fire({
+    title: 'You won!',
+    text: 'Congratulations Player 2, You Won The Game',
     background: '#fdfded',
     color: '#fa7b00',
     showDenyButton: true,

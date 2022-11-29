@@ -29,7 +29,8 @@ button {
   padding: 0.2rem;
   width: 100px;
   font-family: '8-bit-pusab';
-  box-sizing: border-box;/* transform: translate(-50%, -55%); */
+  box-sizing: border-box;
+  width: 50rem;
 }
 
 #board-content img {
