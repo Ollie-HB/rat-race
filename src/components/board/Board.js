@@ -28,14 +28,14 @@ function Board() {
   const [diceImage, setDiceImage] = useState(diceImages[5])
   const [player1Turn, setPlayer1Turn] = useState(true)
 
-  const pipe= [[56, 47, 38],
-                [83,72, 61],
-                [90,79,68],
+  const pipe= [[56, 44, 38],
+                [83,79, 61],
+                [90,72,68],
                ] 
 
-  const note = [[12, 23, 34],
-                 [75,86, 97],
-                 [8,19,30],
+  const note = [[3, 17, 25],
+                 [75, 85, 97],
+                 [8,12,30],
                  ] 
 
   const isReversed = (index) => {
@@ -45,42 +45,98 @@ function Board() {
   const rollDice = () => {
     const randomNum = Math.floor(Math.random() * 6);
     setDiceImage(diceImages[randomNum]);
-    
+    return randomNum;
+  }
+  const handleRoll = () => {
+    const roll = rollDice();
+    movePlayer(roll);
+  }
+
+  const movePlayer = (roll) => {
     if (player1Turn === true) {
-      setPlayer1(player1 + randomNum + 1);
-      if (player1 === pipe[0][0]) {
-        setPlayer1(pipe[0][2])
-      } else if (player1 === pipe[1][0]) {
-        setPlayer1(pipe[1][2])
-      } else if (player1 === pipe[2][0]) {
-        setPlayer1(pipe[2][2])
-      } else if (player1 === note[0][0]) {
-        setPlayer1(note[0][2])
-      } else if (player1 === note[1][0]) {
-        setPlayer1(note[1][2])
-      } else if (player1 === note[2][0]) {
-        setPlayer1(note[2][2])
-      }
-      setPlayer1Turn(false)
+      setPlayer1(player1 + roll + 1);
+      // getNewSquare(player1, setPlayer1);
+      setPlayer1Turn(false);
+      console.log("Player 1's turn - it has moved with the dice roll", player1)
+    } else {
+      setPlayer2(player2 + roll + 1);
+      // getNewSquare(player2, setPlayer2);
+      setPlayer1Turn(true);
+      console.log("Player 2's turn - it has moved with the dice roll", player2)
     }
-    else if (player1Turn === false) {
-      setPlayer2(player2 + randomNum + 1);
-      if (player2 === pipe[0][0]) {
-        setPlayer2(pipe[0][2])
-      } else if (player2 === pipe[1][0]) {
-        setPlayer2(pipe[1][2])
-      } else if (player2 === pipe[2][0]) {
-        setPlayer2(pipe[2][2])
-      } else if (player2 === note[0][0]) {
-        setPlayer2(note[0][2])
-      } else if (player2 === note[1][0]) {
-        setPlayer2(note[1][2])
-      } else if (player2 === note[2][0]) {
-        setPlayer2(note[2][2])
-      }
-      setPlayer1Turn(true)
+  }
+
+  const getNewSquareP1 = () => {
+    if (player1 === pipe[0][0]) {
+      setPlayer1(pipe[0][2])
+    } else if (player1 === pipe[1][0]) {
+      setPlayer1(pipe[1][2])
+    } else if (player1 === pipe[2][0]) {
+      setPlayer1(pipe[2][2])
+    } else if (player1 === note[0][0]) {
+      setPlayer1(note[0][2])
+    } else if (player1 === note[1][0]) {
+      setPlayer1(note[1][2])
+    } else if (player1 === note[2][0]) {
+      setPlayer1(note[2][2])
     }
-    };
+  }
+
+  const getNewSquareP2 = () => {
+    if (player2 === pipe[0][0]) {
+      setPlayer2(pipe[0][2])
+    } else if (player2 === pipe[1][0]) {
+      setPlayer2(pipe[1][2])
+    } else if (player2 === pipe[2][0]) {
+      setPlayer2(pipe[2][2])
+    } else if (player2 === note[0][0]) {
+      setPlayer2(note[0][2])
+    } else if (player2 === note[1][0]) {
+      setPlayer2(note[1][2])
+    } else if (player2 === note[2][0]) {
+      setPlayer2(note[2][2])
+    }
+  }
+ 
+    // if (player1Turn === true) {
+    //   setPlayer1(player1 + randomNum + 1);
+    //   if (player1 === pipe[0][0]) {
+    //     setPlayer1(pipe[0][2])
+    //   } else if (player1 === pipe[1][0]) {
+    //     setPlayer1(pipe[1][2])
+    //   } else if (player1 === pipe[2][0]) {
+    //     setPlayer1(pipe[2][2])
+    //   } else if (player1 === note[0][0]) {
+    //     setPlayer1(note[0][2])
+    //   } else if (player1 === note[1][0]) {
+    //     setPlayer1(note[1][2])
+    //   } else if (player1 === note[2][0]) {
+    //     setPlayer1(note[2][2])
+    //   }
+    //   setPlayer1Turn(false)
+    // }
+    // else if (player1Turn === false) {
+    //   setPlayer2(player2 + randomNum + 1);
+    //   if (player2 === pipe[0][0]) {
+    //     setPlayer2(pipe[0][2])
+    //   } else if (player2 === pipe[1][0]) {
+    //     setPlayer2(pipe[1][2])
+    //   } else if (player2 === pipe[2][0]) {
+    //     setPlayer2(pipe[2][2])
+    //   } else if (player2 === note[0][0]) {
+    //     setPlayer2(note[0][2])
+    //   } else if (player2 === note[1][0]) {
+    //     setPlayer2(note[1][2])
+    //   } else if (player2 === note[2][0]) {
+    //     setPlayer2(note[2][2])
+    //   }
+    //   setPlayer1Turn(true)
+    // }
+    // };
+
+    // getNewSquareP1()
+    // getNewSquareP2()
+
   
 if (player1 >= 100) {
   Swal.fire({
@@ -121,7 +177,7 @@ if (player1 >= 100) {
           </div>
         </div>
     <div id ="board-container">
-      <button type="button" className='diceButton' onClick={rollDice}><img className='dice-square' alt="" src={diceImage}></img></button>
+      <button type="button" className='diceButton' onClick={handleRoll}><img className='dice-square' alt="" src={diceImage}></img></button>
       <div id="board">
         {rows.map((_, i) => {
           return <Row number={i} playerPosition={player1} playerPosition2={player2} pipePositions={pipe} notePositions={note} isReversed={isReversed(i)} />
