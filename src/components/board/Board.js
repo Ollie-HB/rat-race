@@ -127,7 +127,7 @@ if (player1 >= 100) {
   return (
     
    <div className="main-container-board">
-    <div className="title-container-board">
+    {/* <div className="title-container-board">
         <div className="title-content-board">
           <div className="bouncing-text">
             <div className="r">R</div>
@@ -142,7 +142,7 @@ if (player1 >= 100) {
           </div>
             <img src="_com.apple.Pasteboard.crud9d.png" alt=""></img>
         </div>
-    </div>
+    </div> */}
     <div id ="board-container">
       <button type="button" className='diceButton' onClick={rollDice}><img className='dice-square' alt="" src={diceImage}></img></button>
       <div id="board-content">

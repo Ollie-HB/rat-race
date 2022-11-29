@@ -54,22 +54,6 @@ img {
   z-index: 2;
 }
 
-.title-container-board {
-  font-family: "8-bit-pusab";
-  display: flex;
-  justify-content: center;
-}
-
-.title-container-board img {
-	position: relative;
-	padding: 20px;
-	width: 180px;
-	height: 130px;
-	left: 540px;
-	animation: bounce 1s ease infinite;
-  -webkit-animation: bounce 1s ease 1 .7s;
-}
-
 .main-container-board{
   background-image: url("/public/zohaib-ismail-3.jpeg");
   background-position: center;
@@ -90,6 +74,3 @@ img {
   left: 1500px;
   top: 500px;
 }
-
-
-
