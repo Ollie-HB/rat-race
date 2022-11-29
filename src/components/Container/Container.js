@@ -8,9 +8,9 @@ function Container(){
     return (
         <Fragment>
             <div className="container">
-                <ActivePlayer />
+                {/* <ActivePlayer /> */}
                 <Board />
-                <DicePanel />
+                {/* <DicePanel /> */}
             </div>
         </Fragment>
     );

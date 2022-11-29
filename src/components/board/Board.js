@@ -1,12 +1,14 @@
 import React, {useState} from "react";
 import Square from "../Square/Square.js";
 import Swal from 'sweetalert2';
+import './Board.css'
 import Dice1 from '../Dice/images/Dice1.png';
 import Dice2 from '../Dice/images/Dice2.png';
 import Dice3 from '../Dice/images/Dice3.png';
 import Dice4 from '../Dice/images/Dice4.png';
 import Dice5 from '../Dice/images/Dice5.png';
 import Dice6 from '../Dice/images/Dice6.png';
+import ReactAudioPlayer from 'react-audio-player';
 
 function Board() {
 
@@ -123,7 +125,8 @@ if (player1 >= 100) {
 }
 
   return (
-   <>
+    
+   <div className="main-container-board">
     <div className="title-container-board">
         <div className="title-content-board">
           <div className="bouncing-text">
@@ -138,8 +141,8 @@ if (player1 >= 100) {
             <div className="shadow-two"></div>
           </div>
             <img src="_com.apple.Pasteboard.crud9d.png" alt=""></img>
-          </div>
         </div>
+    </div>
     <div id ="board-container">
       <button type="button" className='diceButton' onClick={rollDice}><img className='dice-square' alt="" src={diceImage}></img></button>
       <div id="board-content">
@@ -149,7 +152,12 @@ if (player1 >= 100) {
         <img src="Board.png" alt=""></img>
       </div>
     </div>
-      </>
+    <ReactAudioPlayer
+      src="Rat Race Jingle 2.mp3"
+      autoPlay="true"
+      loop="true"
+    />
+  </div>
       );
     };
     export default Board;

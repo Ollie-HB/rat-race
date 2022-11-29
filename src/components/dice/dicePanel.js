@@ -1,14 +1,14 @@
-import React from 'react';
+// import React from 'react';
 
-export function DicePanel(props){
+// export function DicePanel(props){
 
-    return(
-        <div>
-            <div className="dice-square">
+//     return(
+//         <div>
+//             <div className="dice-square">
                 
-            </div>
-        </div>
-    );
-}
+//             </div>
+//         </div>
+//     );
+// }
 
-export default DicePanel;
+// export default DicePanel;
