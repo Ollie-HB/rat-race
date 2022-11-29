@@ -87,6 +87,10 @@ if (player1 >= 100) {
     confirmButtonColor: '#ffd60a',
     denyButtonText: 'Back',
     denyButtonColor: '#77CEF9',
+    imageUrl: 'Remy.webp',
+    imageWidth: 500,
+    imageHeight: 500,
+    imageAlt: 'Custom image',
   }).then((result) => {
     if (result.isConfirmed) {
     window.location.reload();
@@ -105,6 +109,10 @@ if (player1 >= 100) {
     confirmButtonColor: '#ffd60a',
     denyButtonText: 'Back',
     denyButtonColor: '#77CEF9',
+    imageUrl: 'Stuart_Little_Hero.webp',
+    imageWidth: 500,
+    imageHeight: 500,
+    imageAlt: 'Custom image',
   }).then((result) => {
     if (result.isConfirmed) {
     window.location.reload();
