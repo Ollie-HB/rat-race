@@ -9,7 +9,7 @@ function Square(props) {
             <img id="musical_note"
               alt=""
               src="/musical_note.png"
-              style={{ height: "80px", width: "40px", zIndex: "2", position: "relative", left: "-10px", top: "-10px" }}
+              style={{ height: "80px", width: "40px", zIndex: "2", position: "fixed" }} //left: "-10px", top: "-10px"
             ></img>
           );
         }
@@ -25,7 +25,7 @@ function Square(props) {
             <img id="pipe"
               alt=""
               src="/pipe.png"
-              style={{ height: "80px", width: "40px", zIndex: "2", position: "relative", left: "-10px", top: "-10px" }}
+              style={{ height: "80px", width: "40px", zIndex: "2", position: "fixed" }} //left: "-10px", top: "-10px"
             ></img>
           );
         }
