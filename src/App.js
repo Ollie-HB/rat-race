@@ -1,5 +1,5 @@
 import "./App.css";
-import IndexPage from "./components/IndexPage/Indexpage.js";
+import IndexPage from "./components/IndexPage/IndexPage.js";
 import { useNavigate, Routes, Route } from "react-router-dom";
 // import Container from "./components/Container/Container";
 import { Loading } from './components/Loading/loading';
