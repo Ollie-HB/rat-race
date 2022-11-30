@@ -3,12 +3,17 @@ import "./indexpage.css";
 import { Instructions } from "../Instructions/Instructions.js";
 import { StartButton } from "../StartButton/startButton";
 
+
 // const props = {navigate: 'someValue'}
 // Destructuring
 // const {navigate} = props
 // const navigate = props.navigate
 
 const IndexPage = ({ navigate }) => {
+
+  // const playAudio() {
+
+  // }
   const startGame = () => {
     navigate("/game");
   };
@@ -17,18 +22,18 @@ const IndexPage = ({ navigate }) => {
     <div className="main-container">
       <div className="title-container">
         <div className="title-content">
-        <div class="bouncing-text">
-          <div class="r">R</div>
-          <div class="a">A</div>
-          <div class="t">T</div>
-          <div class="r2">R</div>
-          <div class="a2">A</div>
-          <div class="c">C</div>
-          <div class="e">E</div>
-          <div class="shadow"></div>
-          <div class="shadow-two"></div>
-        </div>
-          <img src="_com.apple.Pasteboard.crud9d.png" alt=""></img>
+          <div class="bouncing-text">
+            <div class="r">R</div>
+            <div class="a">A</div>
+            <div class="t">T</div>
+            <div class="r2">R</div>
+            <div class="a2">A</div>
+            <div class="c">C</div>
+            <div class="e">E</div>
+            <div class="shadow"></div>
+            <div class="shadow-two"></div>
+          </div>
+        <img src="_com.apple.Pasteboard.crud9d.png" alt=""></img>
         </div>
       </div>
       <div className="instructions">

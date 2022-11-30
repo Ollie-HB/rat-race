@@ -2,12 +2,14 @@ import React, {useState} from "react";
 //  import Square from "../Square/Square.js";
 import Row from "../Row/Row.js";
 import Swal from 'sweetalert2';
+import './Board.css'
 import Dice1 from '../Dice/images/Dice1.png';
 import Dice2 from '../Dice/images/Dice2.png';
 import Dice3 from '../Dice/images/Dice3.png';
 import Dice4 from '../Dice/images/Dice4.png';
 import Dice5 from '../Dice/images/Dice5.png';
 import Dice6 from '../Dice/images/Dice6.png';
+import ReactAudioPlayer from 'react-audio-player';
 
 function Board(props) {
 
@@ -121,7 +123,7 @@ function Board(props) {
 if (player1 >= 100) {
   Swal.fire({
     title: 'You won!',
-    text: 'Congratulations, You Won The Game',
+    text: 'Congratulations Player 1, You Won The Game',
     background: '#fdfded',
     color: '#fa7b00',
     showDenyButton: true,
@@ -129,6 +131,32 @@ if (player1 >= 100) {
     confirmButtonColor: '#ffd60a',
     denyButtonText: 'Back',
     denyButtonColor: '#77CEF9',
+    imageUrl: 'Remy.webp',
+    imageWidth: 500,
+    imageHeight: 500,
+    imageAlt: 'Custom image',
+  }).then((result) => {
+    if (result.isConfirmed) {
+    window.location.reload();
+    } else if (result.isDenied) {
+      window.location = "/"
+    }
+  });
+} else if(player2 >=100) {
+  Swal.fire({
+    title: 'You won!',
+    text: 'Congratulations Player 2, You Won The Game',
+    background: '#fdfded',
+    color: '#fa7b00',
+    showDenyButton: true,
+    confirmButtonText: 'Start Again',
+    confirmButtonColor: '#ffd60a',
+    denyButtonText: 'Back',
+    denyButtonColor: '#77CEF9',
+    imageUrl: 'Stuart_Little_Hero.webp',
+    imageWidth: 500,
+    imageHeight: 500,
+    imageAlt: 'Custom image',
   }).then((result) => {
     if (result.isConfirmed) {
     window.location.reload();
@@ -149,36 +177,42 @@ if (player1 >= 100) {
 
 
   return (
-   <>
-    <div className="title-container-board">
+    
+   <div className="main-container-board">
+    {/* <div className="title-container-board">
         <div className="title-content-board">
-          <div class="bouncing-text">
-            <div class="r">R</div>
-            <div class="a">A</div>
-            <div class="t">T</div>
-            <div class="r2">R</div>
-            <div class="a2">A</div>
-            <div class="c">C</div>
-            <div class="e">E</div>
-            <div class="shadow"></div>
-            <div class="shadow-two"></div>
+          <div className="bouncing-text">
+            <div className="r">R</div>
+            <div className="a">A</div>
+            <div className="t">T</div>
+            <div className="r2">R</div>
+            <div className="a2">A</div>
+            <div className="c">C</div>
+            <div className="e">E</div>
+            <div className="shadow"></div>
+            <div className="shadow-two"></div>
           </div>
             <img src="_com.apple.Pasteboard.crud9d.png" alt=""></img>
-          </div>
         </div>
+    </div> */}
     <div id ="board-container">
-      
       <button type="button" className='diceButton' onClick={handleRoll}><img className='dice-square' alt="" src={diceImage}></img></button>
       <div id="board">
         {rows.map((_, i) => {
           return <Row number={i} playerPosition={player1} playerPosition2={player2} pipePositions={pipe} notePositions={note} isReversed={isReversed(i)} />
         })}
+        <img src="Board.png" alt=""></img>
         {/* {squares.map((_, i) => {
           return <Square number={100 - i} playerPosition={player1} playerPosition2={player2} pipePositions={pipe} notePositions={note}  /> */}
         {/* })} */}
       </div>
     </div>
-      </>
+    <ReactAudioPlayer
+      src="Rat Race Jingle 2.mp3"
+      autoPlay="true"
+      loop="true"
+    />
+  </div>
       );
     };
     export default Board;
