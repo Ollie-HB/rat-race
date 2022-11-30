@@ -13,7 +13,7 @@ function Container(){
             <div className="container">
                 <ActivePlayer player1Turn={player1Turn} setPlayer1Turn={setPlayer1Turn}/>
                 <Board player1Turn={player1Turn} setPlayer1Turn={setPlayer1Turn}/>
-                <DicePanel />
+                {/* <DicePanel /> */}
             </div>
         </Fragment>
     );

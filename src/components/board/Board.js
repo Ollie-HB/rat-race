@@ -197,7 +197,7 @@ if (player1 >= 100) {
     </div> */}
     <div id ="board-container">
       <button type="button" className='diceButton' onClick={handleRoll}><img className='dice-square' alt="" src={diceImage}></img></button>
-      <div id="board">
+      <div id="board-content">
         {rows.map((_, i) => {
           return <Row number={i} playerPosition={player1} playerPosition2={player2} pipePositions={pipe} notePositions={note} isReversed={isReversed(i)} />
         })}
