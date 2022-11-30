@@ -1,12 +1,4 @@
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: nowrap;
-  background-color: transparent;
-  width: 100vw;
-  height: 100vh;
-}
+
 
 /* h2 {
   height: 65vh; 

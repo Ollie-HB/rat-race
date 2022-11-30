@@ -33,7 +33,8 @@ const IndexPage = ({ navigate }) => {
             <div class="shadow"></div>
             <div class="shadow-two"></div>
           </div>
-        <img src="_com.apple.Pasteboard.crud9d.png" alt=""></img>
+        <img className="pied" src="Pied Piper Large.png" alt=""></img>
+        <img className="note-index" src="PngItem_101787.png" alt=""></img>
         </div>
       </div>
       <div className="instructions">

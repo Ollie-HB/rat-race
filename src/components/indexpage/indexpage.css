@@ -3,8 +3,8 @@
   background-position: center;
   background-repeat: repeat-x;
   animation: animatedBackground 15s linear infinite alternate;
-	height: 100%;
-  width: 100%;
+	height: 100vh;
+  width: 100vw;
   background-size: cover;
 }
 
@@ -100,19 +100,34 @@
   justify-content: center;
 }
 
-/* img {
-	width: 11rem;
-	height: 8.1rem;
+.pied {
+	width: 10rem;
+	height: 14rem;
 	animation: bounce 1s ease infinite;
   -webkit-animation: bounce 1s ease 1 .7s;
-} */
+  position: fixed;
+  left: 950px;
+  top: -20px;
+}
+
+.note-index {
+  width: 45rem;
+	height: 14rem;
+  left: 250px;
+  top: -20px;
+  position: fixed;
+  animation: bounce 1s ease infinite;
+  -webkit-animation: bounce 1s ease 1 .7s;
+}
 
 
 .button-container {
   font-family: "8-bit-pusab";
   display: flex;
   justify-content: center;
-  margin-top: 20rem;
+  margin-top: 26rem;
+  position: fixed;
+  left: 650px;
 }
 
 @keyframes animatedBackground {
@@ -132,11 +147,13 @@
   font-size: 70px;
   font-weight: 900;
   font-family: "8-bit-pusab"; 
+  left: 350px;
+  z-index: 1;
 }
 
 .r, .a, .t, .r2, .a2, .c, .e {
   position: relative;
-  color: #000000;
+  color: #ffffff;
   text-shadow: 1px 1px 1px #91919124, 1px 2px 1px #91919124, 1px 3px 1px #91919124,
     1px 4px 1px #91919124, 1px 5px 1px #91919124, 1px 6px 1px #91919124,
     1px 7px 1px #91919124, 1px 8px 1px #91919124, 1px 9px 1px #91919124,
