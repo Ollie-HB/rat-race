@@ -46,6 +46,9 @@ function Board(props) {
   const note = [[3, 17, 25],
                  [75, 85, 97],
                  [8,12,30],
+                 [2, 12, 45],
+                 [4, 15, 75],
+                 [5, 11, 100],
                  ] 
 
   const isReversed = (index) => {
@@ -85,19 +88,16 @@ function Board(props) {
   //write this as a forEach loop?
 
   const getNewSquare = (player, setPlayer) => {
-    if (player === pipe[0][0]) {
-      setPlayer(pipe[0][2])
-    } else if (player === pipe[1][0]) {
-      setPlayer(pipe[1][2])
-    } else if (player === pipe[2][0]) {
-      setPlayer(pipe[2][2])
-    } else if (player === note[0][0]) {
-      setPlayer(note[0][2])
-    } else if (player === note[1][0]) {
-      setPlayer(note[1][2])
-    } else if (player === note[2][0]) {
-      setPlayer(note[2][2])
-    }
+    pipe.forEach(element => {
+      if (player === element[0]) {
+        setPlayer(element[2])
+      }
+    })
+    note.forEach(element => {
+      if (player === element[0]) {
+        setPlayer(element[2])
+      }
+    })
   }
  
   getNewSquare(player1, setPlayer1);

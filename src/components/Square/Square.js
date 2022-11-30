@@ -11,8 +11,9 @@ function Square(props) {
             <img id="musical_note"
               alt=""
               src="/musical_note.png"
-              style={{ height: "80px", width: "40px", zIndex: "2", position: "fixed" }}>   
-           </img>
+
+              style={{ height: "80px", width: "40px", zIndex: "2", position: "fixed" }}>
+            </img>
           );
         }
       });
