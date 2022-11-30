@@ -9,7 +9,7 @@ import Dice4 from '../Dice/images/Dice4.png';
 import Dice5 from '../Dice/images/Dice5.png';
 import Dice6 from '../Dice/images/Dice6.png';
 
-function Board() {
+function Board(props) {
 
   const diceImages = [
     Dice1, 
@@ -26,7 +26,15 @@ function Board() {
   const [player1, setPlayer1] = useState(1)
   const [player2, setPlayer2] = useState(1)
   const [diceImage, setDiceImage] = useState(diceImages[5])
-  const [player1Turn, setPlayer1Turn] = useState(true)
+
+  const player1Turn = props.player1Turn;
+  const setPlayer1Turn = props.setPlayer1Turn;
+
+  // const [player1Turn, setPlayer1Turn] = useState(true)
+
+  // const player1Turn = props.player1Turn;
+  // const setPlayer1Turn = props.setPlayer1Turn;
+  // const {player1Turn, setPlayer1Turn} = props;
 
   const pipe= [[56, 44, 38],
                 [83,79, 61],
@@ -40,7 +48,7 @@ function Board() {
 
   const isReversed = (index) => {
     return index % 2 === 0;
-  }                 
+  }              
 
   const rollDice = () => {
     const randomNum = Math.floor(Math.random() * 6);
@@ -54,6 +62,7 @@ function Board() {
 
   const movePlayer = (roll) => {
     if (player1Turn === true) {
+      // if (props.player1Turn === true) {
       setPlayer1(player1 + roll + 1);
       // getNewSquare(player1, setPlayer1);
       setPlayer1Turn(false);
@@ -65,6 +74,13 @@ function Board() {
       console.log("Player 2's turn - it has moved with the dice roll", player2)
     }
   }
+
+  // const getNewSquareP1 = (squareNumber) => {
+  //   if (player1 === pipe[0][0]) {
+  //     return pipe[0][2]
+  // if none of the special squares apply, return original number
+
+  //write this as a forEach loop?
 
   const getNewSquareP1 = () => {
     if (player1 === pipe[0][0]) {
@@ -98,44 +114,8 @@ function Board() {
     }
   }
  
-    // if (player1Turn === true) {
-    //   setPlayer1(player1 + randomNum + 1);
-    //   if (player1 === pipe[0][0]) {
-    //     setPlayer1(pipe[0][2])
-    //   } else if (player1 === pipe[1][0]) {
-    //     setPlayer1(pipe[1][2])
-    //   } else if (player1 === pipe[2][0]) {
-    //     setPlayer1(pipe[2][2])
-    //   } else if (player1 === note[0][0]) {
-    //     setPlayer1(note[0][2])
-    //   } else if (player1 === note[1][0]) {
-    //     setPlayer1(note[1][2])
-    //   } else if (player1 === note[2][0]) {
-    //     setPlayer1(note[2][2])
-    //   }
-    //   setPlayer1Turn(false)
-    // }
-    // else if (player1Turn === false) {
-    //   setPlayer2(player2 + randomNum + 1);
-    //   if (player2 === pipe[0][0]) {
-    //     setPlayer2(pipe[0][2])
-    //   } else if (player2 === pipe[1][0]) {
-    //     setPlayer2(pipe[1][2])
-    //   } else if (player2 === pipe[2][0]) {
-    //     setPlayer2(pipe[2][2])
-    //   } else if (player2 === note[0][0]) {
-    //     setPlayer2(note[0][2])
-    //   } else if (player2 === note[1][0]) {
-    //     setPlayer2(note[1][2])
-    //   } else if (player2 === note[2][0]) {
-    //     setPlayer2(note[2][2])
-    //   }
-    //   setPlayer1Turn(true)
-    // }
-    // };
-
-    getNewSquareP1()
-    getNewSquareP2()
+  getNewSquareP1()
+  getNewSquareP2()
 
   
 if (player1 >= 100) {
@@ -158,6 +138,16 @@ if (player1 >= 100) {
   });
 }
 
+// const playersTurn = () => {
+//   if (player1Turn === true) {
+//     return <h1>player 1 turn</h1>
+//   } else {
+//     return <h1>player 2 turn</h1>
+//   }
+// }
+
+
+
   return (
    <>
     <div className="title-container-board">
@@ -177,6 +167,7 @@ if (player1 >= 100) {
           </div>
         </div>
     <div id ="board-container">
+      
       <button type="button" className='diceButton' onClick={handleRoll}><img className='dice-square' alt="" src={diceImage}></img></button>
       <div id="board">
         {rows.map((_, i) => {

@@ -1,16 +1,13 @@
 import React from 'react';
 
 function ActivePlayer(props){
-
-    return(
-        <div>
-            <div className="active-player">
-                <h2>Players</h2>
-                <div className="player player-1"></div>
-                <div className="player player-2"></div>
-            </div>
-        </div>
-    );
+    
+    const player1Turn = props.player1Turn
+        if (player1Turn) {
+            return <h1>player 1 turn</h1>
+        } else {
+            return <h1>player 2 turn</h1>
+        }
 }
 
 export default ActivePlayer;
