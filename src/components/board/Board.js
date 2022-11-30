@@ -46,6 +46,9 @@ function Board(props) {
   const note = [[3, 17, 25],
                  [75, 85, 97],
                  [8,12,30],
+                 [2, 12, 45],
+                 [4, 15, 75],
+                 [5, 11, 100],
                  ] 
 
   const isReversed = (index) => {
@@ -84,40 +87,21 @@ function Board(props) {
 
   //write this as a forEach loop?
 
-  const getNewSquareP1 = () => {
-    if (player1 === pipe[0][0]) {
-      setPlayer1(pipe[0][2])
-    } else if (player1 === pipe[1][0]) {
-      setPlayer1(pipe[1][2])
-    } else if (player1 === pipe[2][0]) {
-      setPlayer1(pipe[2][2])
-    } else if (player1 === note[0][0]) {
-      setPlayer1(note[0][2])
-    } else if (player1 === note[1][0]) {
-      setPlayer1(note[1][2])
-    } else if (player1 === note[2][0]) {
-      setPlayer1(note[2][2])
-    }
-  }
-
-  const getNewSquareP2 = () => {
-    if (player2 === pipe[0][0]) {
-      setPlayer2(pipe[0][2])
-    } else if (player2 === pipe[1][0]) {
-      setPlayer2(pipe[1][2])
-    } else if (player2 === pipe[2][0]) {
-      setPlayer2(pipe[2][2])
-    } else if (player2 === note[0][0]) {
-      setPlayer2(note[0][2])
-    } else if (player2 === note[1][0]) {
-      setPlayer2(note[1][2])
-    } else if (player2 === note[2][0]) {
-      setPlayer2(note[2][2])
-    }
+  const getNewSquare = (player, setPlayer) => {
+    pipe.forEach(element => {
+      if (player === element[0]) {
+        setPlayer(element[2])
+      }
+    })
+    note.forEach(element => {
+      if (player === element[0]) {
+        setPlayer(element[2])
+      }
+    })
   }
  
-  getNewSquareP1()
-  getNewSquareP2()
+  getNewSquare(player1, setPlayer1);
+  getNewSquare(player2, setPlayer2);
 
   
 if (player1 >= 100) {
@@ -197,7 +181,7 @@ if (player1 >= 100) {
     </div> */}
     <div id ="board-container">
       <button type="button" className='diceButton' onClick={handleRoll}><img className='dice-square' alt="" src={diceImage}></img></button>
-      <div id="board">
+      <div id="board-content">
         {rows.map((_, i) => {
           return <Row number={i} playerPosition={player1} playerPosition2={player2} pipePositions={pipe} notePositions={note} isReversed={isReversed(i)} />
         })}
