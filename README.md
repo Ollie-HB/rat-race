@@ -65,10 +65,12 @@ Now that you have Rat Race installed, you can enjoy it to its fullest extent, in
 - Animated background, loading screen and game pieces
 - A 2 player rollercoaster to provide you with a classic boardgaming experience with a rodent twist
 
-### Diagrams and Planning
+### Diagrams, Images and Planning
 
 [Initial planning and MVP diagram]()
 [Code review and explanation]()
+[Game Board]()
+
 
 ### Future features for Rat Race
 
