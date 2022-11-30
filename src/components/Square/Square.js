@@ -19,6 +19,8 @@ function Square(props) {
     });
   };
 
+  // left: "-10px", top: "-10px">
+
   const ladderVisible = () => {
     return props.pipePositions.map((pipePosition) => {
       return pipePosition.map((ele) => {
@@ -35,6 +37,8 @@ function Square(props) {
       });
     });
   };
+
+  //left: "-10px", top: "-10px">
 
   return (
     <Fragment>

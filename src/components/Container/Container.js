@@ -1,7 +1,7 @@
 import React, { useState, Fragment } from "react";
 import ActivePlayer from '../ActivePlayer/ActivePlayer';
 import Board from '../Board/Board';
-import DicePanel from "../Dice/dicePanel";
+// import DicePanel from "../Dice/dicePanel";
 
 
 function Container(){
