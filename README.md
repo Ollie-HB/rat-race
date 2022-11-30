@@ -1,23 +1,62 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Welcome to Rat Race!
 
-In the project directory, you can run:
+Rat Race is a non-realtime game based around the pre-existing game Snakes and Ladders. It was built from scratch chiefly using React and Javascript. We chose these languages due to the extensive customisability, animation and user interaction that creating such a game would require. 
 
-### `npm start`
+One of the greatest challenges of this project has been consistently implementing tests. While this can be partially attributed to the time pressure surrounding the project and our relative unfamiliarity with the technologies used, given more time and a second attempt we would certainly place more emphasis on a test driven approach. 
 
-Runs the app in the development mode.\
+Despite this, we're extremely proud of the final product we've achieved, creating our own version of a classic game with several personal touches to differentiate it as our own  
+and we're hugely excited to have you here playing our game. To correctly install Rat Race on your computer, please run the following commands in your Command Line Interface:
+
+### gh repo clone Ollie-HB/rat-race
+This will clone the repository containing Rat Race onto your machine.
+
+### npm install
+This will install the various dependencies required to run the game.
+
+### npm install --save react-audio-player
+This allows the game's music and audio cues to be played.
+
+### npm install --save react-spinners
+This enables the game's transition animations.
+
+### npm install sweetalert2
+This enables the games popups.
+
+In addition, please install the font used in the game by visition https://www.dafont.com/8-bit-pusab.font and clicking 'Download'
+
+Once you have installed the above depencies, simply navigate to the correct directory using:
+
+### cd rat-race
+
+From here, boot up the server using the following command:
+
+### npm start
+
+
+Now that you have Rat Race installed, you can enjoy it to its fullest extent, including features such as:
+
+- Themed custom game board (designed in-house)
+- Bespoke 8-bit rats to match the games theme (designed in-house)
+- Original music and audio cues (created in-house)
+- Animated background, loading screen and game pieces
+- A 2 player rollercoaster to provide you with a classic boardgaming experience 
+  with a rodent twist 
+
+Rat Race was built using an Agile Teamwork Structure by:
+Hibaq Obsiye - https://github.com/hibscodes
+Oliver Beck - https://github.com/Ollie-HB
+Calum Wilmot - https://github.com/Calumwi
+Imisi Aina - https://github.com/imisiaina
+Miles Cragg - https://github.com/Cragg87
+Aamir Khan - https://github.com/AamirKhanDev
+Piper-Rose Armstrong - https://github.com/piperrosearmstrong 
+
+
+
+
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
@@ -29,42 +68,6 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
 ### Deployment
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
