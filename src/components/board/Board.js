@@ -103,7 +103,6 @@ function Board(props) {
   getNewSquare(player1, setPlayer1);
   getNewSquare(player2, setPlayer2);
 
-  
 if (player1 >= 100) {
   Swal.fire({
     title: 'You won!',
@@ -185,10 +184,10 @@ if (player1 >= 100) {
         {rows.map((_, i) => {
           return <Row number={i} playerPosition={player1} playerPosition2={player2} pipePositions={pipe} notePositions={note} isReversed={isReversed(i)} />
         })}
-        <img src="Board.png" alt=""></img>
         {/* {squares.map((_, i) => {
           return <Square number={100 - i} playerPosition={player1} playerPosition2={player2} pipePositions={pipe} notePositions={note}  /> */}
         {/* })} */}
+        <img src="Board.png" alt=""></img>
       </div>
     </div>
     <ReactAudioPlayer
