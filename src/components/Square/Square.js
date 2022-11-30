@@ -11,13 +11,15 @@ function Square(props) {
             <img id="musical_note"
               alt=""
               src="/musical_note.png"
-              style={{ height: "80px", width: "40px", zIndex: "2", position: "fixed" }} //left: "-10px", top: "-10px">
-            </img>
+              style={{ height: "80px", width: "40px", zIndex: "2", position: "fixed" }}>   
+           </img>
           );
         }
       });
     });
   };
+
+  // left: "-10px", top: "-10px">
 
   const ladderVisible = () => {
     return props.pipePositions.map((pipePosition) => {
@@ -28,13 +30,15 @@ function Square(props) {
             <img id="pipe"
               alt=""
               src="/pipe.png"
-              style={{ height: "80px", width: "40px", zIndex: "2", position: "fixed" }} //left: "-10px", top: "-10px">
+              style={{ height: "80px", width: "40px", zIndex: "2", position: "fixed" }}>
             </img>
           );
         }
       });
     });
   };
+
+  //left: "-10px", top: "-10px">
 
   return (
     <Fragment>

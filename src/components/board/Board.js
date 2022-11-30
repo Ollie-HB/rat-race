@@ -84,42 +84,25 @@ function Board(props) {
 
   //write this as a forEach loop?
 
-  const getNewSquareP1 = () => {
-    if (player1 === pipe[0][0]) {
-      setPlayer1(pipe[0][2])
-    } else if (player1 === pipe[1][0]) {
-      setPlayer1(pipe[1][2])
-    } else if (player1 === pipe[2][0]) {
-      setPlayer1(pipe[2][2])
-    } else if (player1 === note[0][0]) {
-      setPlayer1(note[0][2])
-    } else if (player1 === note[1][0]) {
-      setPlayer1(note[1][2])
-    } else if (player1 === note[2][0]) {
-      setPlayer1(note[2][2])
-    }
-  }
-
-  const getNewSquareP2 = () => {
-    if (player2 === pipe[0][0]) {
-      setPlayer2(pipe[0][2])
-    } else if (player2 === pipe[1][0]) {
-      setPlayer2(pipe[1][2])
-    } else if (player2 === pipe[2][0]) {
-      setPlayer2(pipe[2][2])
-    } else if (player2 === note[0][0]) {
-      setPlayer2(note[0][2])
-    } else if (player2 === note[1][0]) {
-      setPlayer2(note[1][2])
-    } else if (player2 === note[2][0]) {
-      setPlayer2(note[2][2])
+  const getNewSquare = (player, setPlayer) => {
+    if (player === pipe[0][0]) {
+      setPlayer(pipe[0][2])
+    } else if (player === pipe[1][0]) {
+      setPlayer(pipe[1][2])
+    } else if (player === pipe[2][0]) {
+      setPlayer(pipe[2][2])
+    } else if (player === note[0][0]) {
+      setPlayer(note[0][2])
+    } else if (player === note[1][0]) {
+      setPlayer(note[1][2])
+    } else if (player === note[2][0]) {
+      setPlayer(note[2][2])
     }
   }
  
-  getNewSquareP1()
-  getNewSquareP2()
+  getNewSquare(player1, setPlayer1);
+  getNewSquare(player2, setPlayer2);
 
-  
 if (player1 >= 100) {
   Swal.fire({
     title: 'You won!',
@@ -197,14 +180,14 @@ if (player1 >= 100) {
     </div> */}
     <div id ="board-container">
       <button type="button" className='diceButton' onClick={handleRoll}><img className='dice-square' alt="" src={diceImage}></img></button>
-      <div id="board">
+      <div id="board-content">
         {rows.map((_, i) => {
           return <Row number={i} playerPosition={player1} playerPosition2={player2} pipePositions={pipe} notePositions={note} isReversed={isReversed(i)} />
         })}
-        <img src="Board.png" alt=""></img>
         {/* {squares.map((_, i) => {
           return <Square number={100 - i} playerPosition={player1} playerPosition2={player2} pipePositions={pipe} notePositions={note}  /> */}
         {/* })} */}
+        <img src="Board.png" alt=""></img>
       </div>
     </div>
     <ReactAudioPlayer
