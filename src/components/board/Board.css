@@ -25,7 +25,7 @@ img {
   justify-content: center;
   align-items: center;
   position: relative;
-  left: 550px;
+  left: 400px;
   top: -300px;
 }
 
@@ -83,11 +83,11 @@ img {
   top: 200px;
 }
 
-.circle-blue img {
+.circle-blue {
   width: 100px;
   height: 100px;
   position: relative;
-  left: 20px;
+  left: 95px;
   top: -5px;
   border-radius: 50%;
   background-color: rgba(13, 13, 154, 0.832);
@@ -95,12 +95,12 @@ img {
   inset 0 0 10px rgba(0, 0, 0, 1);
 }
 
-.circle-red img {
+.circle-red {
   width: 100px;
   height: 100px;
   position: relative;
-  left: 40px;
-  top: 30px;
+  left: -60px;
+  top: 220px;
   border-radius: 50%;
   background-color: rgba(225, 18, 18, 0.852);
   box-shadow: 0 0 10px rgb(0, 0, 0), 0 0 10px rgba(0, 0, 0, 1),
@@ -109,18 +109,17 @@ img {
 
 .active-player-panel {
   position: absolute;
-  bottom: 400px;
+  bottom: 125px;
   left: 50px;
-  background-color: #ebebf3dd;
+  background-color: transparent;
   border-radius: 10px;
-  width: 400px;
-  height: 100px;
+  width: 200px;
+  height: 500px;
 }
 
 .active-player-panel .act-pnl-cont {
   position: relative;
- 
-  background-color: #77cef9;
+  background-color: transparent;
   padding: 2rem;
   text-align: center;
   display: flex;
@@ -131,10 +130,11 @@ img {
 }
 
 .active-player-panel,
-.active-player-panel .act-pnl-cont {
-  box-shadow: 0 0 2px rgb(119, 206, 249),
-				0 0 10px rgb(237, 198, 0),
-				inset 0 0 5px rgba(237, 198, 0, 1);
+.active-player-panel  {
+  background: linear-gradient(to left, #FFFF99 0%, #66FFFF 100%);
+  box-shadow: 0 0 2px rgb(0, 0, 0),
+        0 0 10px rgb(4, 3, 3),
+        inset 0 0 5px rgb(16, 14, 6);
 	border-radius: 10px;
 }
 
@@ -154,19 +154,38 @@ img {
   height: 100px;
 }
 
+.stuart-p1 {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: 230px;
+  left: -100px;
+}
+
+.remy-p2 {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: -5px;
+  left: 45px;
+}
+
+
 .active-player-panel p {
   display: flex;
   justify-content: center;
-  top: 85px;
-  left: -95px;
+  top: 100px;
+  left: -5px;
   position: relative;
 }
 
 .active-player-panel .p2 {
   display: flex;
   justify-content: center;
-  top: 30px;
-  left: 30px;
+  top: 10px;
+  left: 10px;
   position: relative;
 }
 
