@@ -135,9 +135,9 @@ if (player1 >= 100) {
     confirmButtonColor: '#ffd60a',
     denyButtonText: 'Back',
     denyButtonColor: '#77CEF9',
-    imageUrl: 'Remy.webp',
-    imageWidth: 500,
-    imageHeight: 500,
+    imageUrl: 'tumblr_2374e4a72a250144f743db1170dacd6e_2709a9f4_540.gif',
+    imageWidth: 300,
+    imageHeight: 300,
     imageAlt: 'Custom image',
   }).then((result) => {
     if (result.isConfirmed) {
@@ -157,9 +157,9 @@ if (player1 >= 100) {
     confirmButtonColor: '#ffd60a',
     denyButtonText: 'Back',
     denyButtonColor: '#77CEF9',
-    imageUrl: 'Stuart_Little_Hero.webp',
-    imageWidth: 500,
-    imageHeight: 500,
+    imageUrl: 'later-later-dude.gif',
+    imageWidth: 300,
+    imageHeight: 300,
     imageAlt: 'Custom image',
   }).then((result) => {
     if (result.isConfirmed) {

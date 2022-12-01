@@ -33,7 +33,7 @@ img {
 #board-content img {
   position: absolute;
   border-radius: 50px;
-  width: 600px;
+  width: 610px;
   height: 600px;
   top: 250px;
   left: 20px;
@@ -46,7 +46,7 @@ img {
   background-color: transparent;
   display: flex;
   flex-direction: column;
-  width: 55px;
+  width: 60px;
   height: 55px;
   position: relative;
   top: 260px;
@@ -61,14 +61,6 @@ img {
   background-image: url("/public/rat 1.png");
   z-index: 2;
 } */
-
-#player_2 {
-  width: 10px;
-  height: 10px;
-  background-color: red;
-  position: relative;
-  z-index: 2;
-}
 
 .main-container-board{
   background-image: url("/public/zohaib-ismail-3.jpeg");
@@ -127,13 +119,7 @@ img {
 
 .active-player-panel .act-pnl-cont {
   position: relative;
-  background: repeating-linear-gradient(
-    45deg,
-    #77cef9,
-    #77cef9 2px,
-    #edc600 5px,
-    #edc600 4px
-  );
+ 
   background-color: #77cef9;
   padding: 2rem;
   text-align: center;
@@ -146,9 +132,9 @@ img {
 
 .active-player-panel,
 .active-player-panel .act-pnl-cont {
-  box-shadow: 0 0 2px #fa7b00,
-				0 0 10px rgba(0, 0, 0, 1),
-				inset 0 0 5px rgba(0, 0, 0, 1);
+  box-shadow: 0 0 2px rgb(119, 206, 249),
+				0 0 10px rgb(237, 198, 0),
+				inset 0 0 5px rgba(237, 198, 0, 1);
 	border-radius: 10px;
 }
 
@@ -189,6 +175,7 @@ img {
   width: 6.25rem;
   background-size: 50%;
   position: relative;
+  left: -25px;
   margin-right: 2.0rem;
   background-image: url("/public/rat 1.png");
   z-index: 2;
@@ -196,6 +183,7 @@ img {
   -webkit-animation: bounce-top 1.1s both;
 animation: bounce-top 1.1s both;
 }
+
 
 @-webkit-keyframes bounce-top {
   0% {
@@ -302,3 +290,10 @@ animation: bounce-top 1.1s both;
   }
 }
 
+#player_2 {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  position: relative;
+  z-index: 2;
+}
