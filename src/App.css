@@ -1,23 +1,7 @@
-
-
-/* h2 {
-  height: 65vh; 
-  margin-right: 50px;
-  font-family: '8-bit-pusab';
-} */
-
 body {
-  font-family: '8-bit-pusab';
+  font-family: "8-bit-pusab";
 }
 
 button {
-  font-family: '8-bit-pusab';
+  font-family: "8-bit-pusab";
 }
-
-/* .diceContainer {
-  display: flex;
-  width: 500px;
-  height: 400px;
-  background-color: transparent;
-  padding: 2rem 1rem;
-}  */

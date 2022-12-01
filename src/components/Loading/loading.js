@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
-import Container from '../Container/Container';
-import "../Loading/loading.css";
+import Container from "../Container/Container";
+import "../Loading/Loading.css";
 
 export const Loading = () => {
-
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -16,23 +15,15 @@ export const Loading = () => {
 
   return (
     <div className="App">
-        {
-          loading ?
-            <ClimbingBoxLoader
-            color={"#fa7b00"}
-            loading={loading}
-            size={30}
-            // aria-label="Loading Spinner"
-            // data-testid="loader"
-          />
-
-            :
-          <div className="container">
-          <Container /> 
-          </div>
-        }
+      {loading ? (
+        <ClimbingBoxLoader color={"#fa7b00"} loading={loading} size={30} />
+      ) : (
+        <div className="container">
+          <Container />
+        </div>
+      )}
     </div>
-  )
+  );
 };
 
 export default Loading;
