@@ -22,23 +22,6 @@ This will clone the repository containing Rat Race onto your machine.
 
 This will install the various dependencies required to run the game.
 
-```
-npm install --save react-audio-player
-```
-
-This allows the game's music and audio cues to be played.
-
-```
-npm install --save react-spinners
-```
-
-This enables the game's transition animations.
-
-```
-npm install sweetalert2
-```
-
-This enables the games popups.
 
 In addition, please install the font used in the game by visiting https://www.dafont.com/8-bit-pusab.font and clicking 'Download'.
 
