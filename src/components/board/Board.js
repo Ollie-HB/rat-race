@@ -38,18 +38,18 @@ function Board(props) {
   // const setPlayer1Turn = props.setPlayer1Turn;
   // const {player1Turn, setPlayer1Turn} = props;
 
-  const pipe= [[14, 7],
+  const pipe= [[14, 9, 7],
                 [40, 44, 17],
                 [70,79, 31],
-                [87,72,45],
-                [99, 79]
+                [87, 72, 45],
+                [99, 89, 79]
                ] 
 
   const note = [[3, 17, 15],
                  [37, 85, 83],
                  [11, 12, 34],
-                 [47, 67],
-                 [64, 93]
+                 [47, 50, 67],
+                 [64, 70, 93]
                  ] 
 
   const isReversed = (index) => {
@@ -205,7 +205,7 @@ if (player1 >= 100) {
         {rows.map((_, i) => {
           return <Row number={i} playerPosition={player1} playerPosition2={player2} pipePositions={pipe} notePositions={note} isReversed={isReversed(i)} />
         })}
-        <img src="Board3.png" alt=""></img>
+        <img src="Board4.png" alt=""></img>
         {/* {squares.map((_, i) => {
           return <Square number={100 - i} playerPosition={player1} playerPosition2={player2} pipePositions={pipe} notePositions={note}  /> */}
         {/* })} */}

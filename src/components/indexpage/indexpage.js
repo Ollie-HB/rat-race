@@ -2,6 +2,7 @@ import React from "react";
 import "./indexpage.css";
 import { Instructions } from "../Instructions/Instructions.js";
 import { StartButton } from "../StartButton/startButton";
+import ReactAudioPlayer from 'react-audio-player';
 
 
 // const props = {navigate: 'someValue'}
@@ -45,6 +46,11 @@ const IndexPage = ({ navigate }) => {
       <div className="button-container">
         <StartButton startGame={startGame} />
       </div>
+      <ReactAudioPlayer
+      src="Rat Race D&B.mp3"
+      autoPlay="true"
+      loop="true"
+      />
     </div>
   );
 };
