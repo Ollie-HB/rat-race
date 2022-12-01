@@ -27,8 +27,9 @@ export const Loading = () => {
           />
 
             :
-
+          <div className="container">
           <Container /> 
+          </div>
         }
     </div>
   )

@@ -2,6 +2,7 @@ import React from "react";
 import "./indexpage.css";
 import { Instructions } from "../Instructions/Instructions.js";
 import { StartButton } from "../StartButton/startButton";
+import ReactAudioPlayer from 'react-audio-player';
 
 
 // const props = {navigate: 'someValue'}
@@ -33,7 +34,8 @@ const IndexPage = ({ navigate }) => {
             <div class="shadow"></div>
             <div class="shadow-two"></div>
           </div>
-        <img src="_com.apple.Pasteboard.crud9d.png" alt=""></img>
+        <img className="pied" src="Pied Piper Large.png" alt=""></img>
+        <img className="note-index" src="PngItem_101787.png" alt=""></img>
         </div>
       </div>
       <div className="instructions">
@@ -44,6 +46,11 @@ const IndexPage = ({ navigate }) => {
       <div className="button-container">
         <StartButton startGame={startGame} />
       </div>
+      <ReactAudioPlayer
+      src="Rat Race D&B.mp3"
+      autoPlay="true"
+      loop="true"
+      />
     </div>
   );
 };

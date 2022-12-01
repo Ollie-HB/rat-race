@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-//  import Square from "../Square/Square.js";
 import Row from "../Row/Row.js";
 import Swal from 'sweetalert2';
 import './Board.css'
@@ -24,7 +23,7 @@ function Board(props) {
 
   const rows = new Array(10).fill('')
 
-  // const squares = new Array(100).fill('')
+
   const [player1, setPlayer1] = useState(1)
   const [player2, setPlayer2] = useState(1)
   const [diceImage, setDiceImage] = useState(diceImages[5])
@@ -32,23 +31,20 @@ function Board(props) {
   const player1Turn = props.player1Turn;
   const setPlayer1Turn = props.setPlayer1Turn;
 
-  // const [player1Turn, setPlayer1Turn] = useState(true)
 
-  // const player1Turn = props.player1Turn;
-  // const setPlayer1Turn = props.setPlayer1Turn;
-  // const {player1Turn, setPlayer1Turn} = props;
-
-  const pipe= [[56, 44, 38],
-                [83,79, 61],
-                [90,72,68],
+  const pipes= [[14, 7],
+                [40, 17],
+                [70, 31],
+                [87, 45],
+                [99, 79]
                ] 
 
-  const note = [[3, 17, 25],
-                 [75, 85, 97],
-                 [8,12,30],
-                 [2, 12, 45],
-                 [4, 15, 75],
-                 [5, 11, 100],
+
+  const notes = [[3, 15],
+                 [11, 34],
+                 [38, 83],
+                 [47, 67],
+                 [64, 93]  
                  ] 
 
   const isReversed = (index) => {
@@ -67,35 +63,24 @@ function Board(props) {
 
   const movePlayer = (roll) => {
     if (player1Turn === true) {
-      // if (props.player1Turn === true) {
       setPlayer1(player1 + roll + 1);
-      // getNewSquare(player1, setPlayer1);
       setPlayer1Turn(false);
-      console.log("Player 1's turn - it has moved with the dice roll", player1)
     } else {
       setPlayer2(player2 + roll + 1);
-      // getNewSquare(player2, setPlayer2);
       setPlayer1Turn(true);
-      console.log("Player 2's turn - it has moved with the dice roll", player2)
     }
   }
 
-  // const getNewSquareP1 = (squareNumber) => {
-  //   if (player1 === pipe[0][0]) {
-  //     return pipe[0][2]
-  // if none of the special squares apply, return original number
-
-  //write this as a forEach loop?
 
   const getNewSquare = (player, setPlayer) => {
-    pipe.forEach(element => {
+    pipes.forEach(element => {
       if (player === element[0]) {
-        setPlayer(element[2])
+        setPlayer(element[1])
       }
     })
-    note.forEach(element => {
+    notes.forEach(element => {
       if (player === element[0]) {
-        setPlayer(element[2])
+        setPlayer(element[1])
       }
     })
   }
@@ -114,9 +99,9 @@ if (player1 >= 100) {
     confirmButtonColor: '#ffd60a',
     denyButtonText: 'Back',
     denyButtonColor: '#77CEF9',
-    imageUrl: 'Remy.webp',
-    imageWidth: 500,
-    imageHeight: 500,
+    imageUrl: 'tumblr_2374e4a72a250144f743db1170dacd6e_2709a9f4_540.gif',
+    imageWidth: 300,
+    imageHeight: 300,
     imageAlt: 'Custom image',
   }).then((result) => {
     if (result.isConfirmed) {
@@ -136,9 +121,9 @@ if (player1 >= 100) {
     confirmButtonColor: '#ffd60a',
     denyButtonText: 'Back',
     denyButtonColor: '#77CEF9',
-    imageUrl: 'Stuart_Little_Hero.webp',
-    imageWidth: 500,
-    imageHeight: 500,
+    imageUrl: 'later-later-dude.gif',
+    imageWidth: 300,
+    imageHeight: 300,
     imageAlt: 'Custom image',
   }).then((result) => {
     if (result.isConfirmed) {
@@ -149,13 +134,7 @@ if (player1 >= 100) {
   });
 }
 
-// const playersTurn = () => {
-//   if (player1Turn === true) {
-//     return <h1>player 1 turn</h1>
-//   } else {
-//     return <h1>player 2 turn</h1>
-//   }
-// }
+
 
 
 
@@ -182,10 +161,13 @@ if (player1 >= 100) {
       <button type="button" className='diceButton' onClick={handleRoll}><img className='dice-square' alt="" src={diceImage}></img></button>
       <div id="board-content">
         {rows.map((_, i) => {
-          return <Row number={i} playerPosition={player1} playerPosition2={player2} pipePositions={pipe} notePositions={note} isReversed={isReversed(i)} />
+          return <Row number={i} playerPosition={player1} playerPosition2={player2} pipePositions={pipes} notePositions={notes} isReversed={isReversed(i)} />
         })}
+        
+        <img src="Board4.png" alt=""></img>
+
         {/* {squares.map((_, i) => {
-          return <Square number={100 - i} playerPosition={player1} playerPosition2={player2} pipePositions={pipe} notePositions={note}  /> */}
+          return <Square number={100 - i} playerPosition={player1} playerPosition2={player2} pipePositions={pipes} notePositions={notes}  /> */}
         {/* })} */}
         <img src="Board.png" alt=""></img>
       </div>

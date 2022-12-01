@@ -6,7 +6,7 @@ export const Instructions = () => {
     <div className="instructions-container">
       <h2> How to Play </h2>
       <ul>
-        <li>Go to ‘Start Game’ to play.</li>
+        <li>Go to ‘PLAY’ to start a game.</li>
         <li>Click the dice in the corner to roll.</li>
         <li>The first player to reach the end of the board wins.</li>
         <li>
