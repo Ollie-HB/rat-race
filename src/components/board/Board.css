@@ -53,15 +53,6 @@ img {
   left: 150px;
 }
 
-/* #player_1 {
-  width: 10px;
-  height: 10px;
-  background-color: red;
-  position: relative;
-  background-image: url("/public/rat 1.png");
-  z-index: 2;
-} */
-
 .main-container-board {
   background-image: url("/public/zohaib-ismail-3.jpeg");
   background-position: center;
@@ -192,7 +183,8 @@ img {
   width: 6.25rem;
   background-size: 50%;
   position: relative;
-  left: -25px;
+  left: -15px;
+  bottom: -5px;
   margin-right: 2rem;
   background-image: url("/public/rat 1.png");
   z-index: 2;
@@ -310,8 +302,9 @@ img {
   height: 6.25rem;
   width: 6.25rem;
   background-size: 50%;
-  position: relative;
-  left: -25px;
+  position: absolute;
+  left: -15px;
+  bottom: -60px;
   margin-right: 2rem;
   background-image: url("/public/rat 2.png");
   z-index: 2;

@@ -6,15 +6,13 @@ function Square(props) {
       <div className="square" id={props.number}>
         {props.number}
         {props.playerPosition === props.number && (
-          <div>
+          <div id="player_1">
             {" "}
-            <div id="player_1" className="player-icon"></div>
           </div>
         )}
         {props.playerPosition2 === props.number && (
-          <div>
+          <div id="player_2">
             {" "}
-            <div id="player_2" className="player-icon"></div>
           </div>
         )}
       </div>
