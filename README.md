@@ -68,7 +68,7 @@ Now that you have Rat Race installed, you can enjoy it to its fullest extent, in
 
 Rat Race was built using an Agile Teamwork Structure by:
 
-- [Hibaq Obsiye](https://github.com/hibscodes)
+- [Hibaq Obsiye](https://github.com/HibaqObsiye)
 - [Oliver Beck](https://github.com/Ollie-HB)
 - [Calum Wilmot](https://github.com/Calumwi)
 - [Imisi Aina](https://github.com/imisiaina)
